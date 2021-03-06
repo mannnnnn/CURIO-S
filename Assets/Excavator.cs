@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Excavator : MonoBehaviour
 {
@@ -9,6 +10,13 @@ public class Excavator : MonoBehaviour
     private List<MineableObject> junk = new List<MineableObject>();
     public ControlMode controlMode = ControlMode.HAND;
     public GameObject scanner;
+
+    [Header("DebugLabels")]
+    public Text currNameLabel;
+    public Text currProgressLabel;
+    public Text currQualityLabel;
+    private MineableObject currentObject;
+
 
     public enum ControlMode //what the mouse/finger is controlling
     {
