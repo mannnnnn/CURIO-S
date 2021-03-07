@@ -12,6 +12,7 @@ namespace FreeDraw
     // 4. Hold down left mouse to draw on this texture!
     public class Drawable : MonoBehaviour
     {
+        public Excavator.ControlMode enabledMode = Excavator.ControlMode.MARKER;
         // PEN COLOUR
         public static Color Pen_Colour = Color.red;     // Change these to change the default drawing settings
         // PEN WIDTH (actually, it's a radius, in pixels)
@@ -183,7 +184,7 @@ namespace FreeDraw
         void Update()
         {
 
-            if(Excavator.GetInstance().controlMode != Excavator.ControlMode.MARKER)
+            if(Excavator.GetInstance().controlMode != enabledMode)
             {
                 return;
             }
@@ -282,6 +283,22 @@ namespace FreeDraw
         }
         public void ApplyMarkedPixelChanges()
         {
+            float pixCounter = 0;
+            if (Excavator.GetInstance().controlMode == Excavator.ControlMode.DRILL)
+            {
+                Excavator chimera = Excavator.GetInstance();
+                MineLine mineLine = GetComponent<MineLine>();
+                foreach (Color color in cur_colors)
+                {
+                    if (color == Pen_Colour)
+                    {
+                        pixCounter += 1;
+                    }
+                }
+                mineLine.ProgressUpdate(pixCounter / (float)cur_colors.Length);
+            }
+
+
             drawable_texture.SetPixels32(cur_colors);
             drawable_texture.Apply();
         }

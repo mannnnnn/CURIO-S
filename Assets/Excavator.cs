@@ -17,6 +17,7 @@ public class Excavator : MonoBehaviour
     public Text currQualityLabel;
     private MineableObject currentObject;
 
+    public Color minedColor = Color.red;
 
     public enum ControlMode //what the mouse/finger is controlling
     {

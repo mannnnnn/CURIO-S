@@ -697,6 +697,7 @@ MonoBehaviour:
   currNameLabel: {fileID: 1447193948}
   currProgressLabel: {fileID: 234497390}
   currQualityLabel: {fileID: 699573110}
+  minedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &392849459
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,6 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enabledMode: 0
   Drawing_Layers:
     serializedVersion: 2
     m_Bits: 256
@@ -2190,6 +2192,7 @@ GameObject:
   - component: {fileID: 1941088747}
   - component: {fileID: 1941088746}
   - component: {fileID: 1941088745}
+  - component: {fileID: 1941088748}
   m_Layer: 0
   m_Name: DrillableArea
   m_TagString: Untagged
@@ -2977,8 +2980,25 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1941088748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941088743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledMode: 1
+  Drawing_Layers:
+    serializedVersion: 2
+    m_Bits: 256
+  Reset_Canvas_On_Play: 1
 --- !u!1 &1983033772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,8 +3026,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983033772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.042, y: 0.189, z: -1}
-  m_LocalScale: {x: 0.08023322, y: 0.08023322, z: 0.08023322}
+  m_LocalPosition: {x: -0.022, y: 0.2455, z: -1}
+  m_LocalScale: {x: 0.122087255, y: 0.14469482, z: 0.08023322}
   m_Children:
   - {fileID: 1941088744}
   m_Father: {fileID: 1477399711}
@@ -3061,7 +3081,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1983033775
 MonoBehaviour:
@@ -3492,7 +3512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192, y: 88}
+  m_AnchoredPosition: {x: -519, y: -206.15}
   m_SizeDelta: {x: 561.59094, y: 412.30972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2040328636

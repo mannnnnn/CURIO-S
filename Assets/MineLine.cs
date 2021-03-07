@@ -8,7 +8,6 @@ public class MineLine : MonoBehaviour
     private MineableObject parent;
     public bool interacting = false;
     private Excavator.ControlMode cursorTool = Excavator.ControlMode.HAND;
-
     void Start()
     {
         parent = transform.GetComponentInParent<MineableObject>();
@@ -21,7 +20,6 @@ public class MineLine : MonoBehaviour
 
     public void OnMouseDown()
     {
-        UnityEngine.Debug.Log("Hello!");
         cursorTool = Excavator.GetInstance().controlMode;
         interacting = true;
         parent.UpdateDebugLabels();
@@ -39,7 +37,6 @@ public class MineLine : MonoBehaviour
 
     void OnMouseOver()
     {
-        UnityEngine.Debug.Log("Oh!");
         if (Input.GetMouseButton(0))
         {
             cursorTool = Excavator.GetInstance().controlMode;
@@ -48,18 +45,26 @@ public class MineLine : MonoBehaviour
         parent.UpdateDebugLabels();
     }
 
-    void FixedUpdate()
+   
+
+    //called by Drawable to notify when a pixel has been colored
+    public void ProgressUpdate(float progress)
     {
         if (cursorTool == Excavator.ControlMode.DRILL && interacting && !parent.broken)
         {
-            UnityEngine.Debug.Log("Brrrr!");
             //progress!
-            parent.progress += 0.01f;
+            parent.progress = progress;
             if (parent.progress >= parent.completionThreshold)
             {
                 parent.removeable = true;
             }
             parent.UpdateDebugLabels();
         }
+    }
+
+
+    void FixedUpdate()
+    {
+        //N/A
     }
 }
