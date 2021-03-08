@@ -42,7 +42,6 @@ public class MineableObject : MonoBehaviour
     public void OnMouseDown()
     {
         cursorTool = Excavator.GetInstance().controlMode;
-
         if (cursorTool == Excavator.ControlMode.HAND)
         {
             if(progress >= completionThreshold && !broken)
@@ -70,12 +69,13 @@ public class MineableObject : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButton(0))
+        
+        cursorTool = Excavator.GetInstance().controlMode;
+        if (!interacting && Input.GetMouseButton(0) && cursorTool == Excavator.ControlMode.DRILL)
         {
-            cursorTool = Excavator.GetInstance().controlMode;
             interacting = true;
+            UpdateDebugLabels();
         }
-        UpdateDebugLabels();
     }
 
     public void UpdateDebugLabels()

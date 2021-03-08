@@ -16,7 +16,7 @@ namespace FreeDraw
         // PEN COLOUR
         public static Color Pen_Colour = Color.red;     // Change these to change the default drawing settings
         // PEN WIDTH (actually, it's a radius, in pixels)
-        public static int Pen_Width = 3;
+        public static int Pen_Width = 10;
 
 
         public delegate void Brush_Function(Vector2 world_position);
@@ -284,8 +284,9 @@ namespace FreeDraw
         public void ApplyMarkedPixelChanges()
         {
             float pixCounter = 0;
+            float nonClearPixels = 0;
             if (Excavator.GetInstance().controlMode == Excavator.ControlMode.DRILL)
-            {
+            {//TODO: currently, damage still counts towards progress. I guess that's fine?
                 Excavator chimera = Excavator.GetInstance();
                 MineLine mineLine = GetComponent<MineLine>();
                 foreach (Color color in cur_colors)
@@ -294,8 +295,13 @@ namespace FreeDraw
                     {
                         pixCounter += 1;
                     }
+
+                    if(color == Color.black)
+                    {
+                        nonClearPixels += 1;
+                    }
                 }
-                mineLine.ProgressUpdate(pixCounter / (float)cur_colors.Length);
+                mineLine.ProgressUpdate(pixCounter / nonClearPixels);
             }
 
 
@@ -364,6 +370,11 @@ namespace FreeDraw
 
             drawable_sprite = this.GetComponent<SpriteRenderer>().sprite;
             drawable_texture = drawable_sprite.texture;
+
+            if(GetComponent<MineLine> () != null)
+            {
+                Reset_Colour = Color.black;
+            }
 
             // Initialize clean pixels to use
             clean_colours_array = new Color[(int)drawable_sprite.rect.width * (int)drawable_sprite.rect.height];

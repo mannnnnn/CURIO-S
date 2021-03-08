@@ -50,7 +50,8 @@ public class MineLine : MonoBehaviour
     //called by Drawable to notify when a pixel has been colored
     public void ProgressUpdate(float progress)
     {
-        if (cursorTool == Excavator.ControlMode.DRILL && interacting && !parent.broken)
+        cursorTool = Excavator.GetInstance().controlMode;
+        if (cursorTool == Excavator.ControlMode.DRILL && !parent.broken)
         {
             //progress!
             parent.progress = progress;
