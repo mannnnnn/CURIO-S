@@ -13,11 +13,9 @@ namespace FreeDraw
     public class Drawable : MonoBehaviour
     {
         public Excavator.ControlMode enabledMode = Excavator.ControlMode.MARKER;
-        // PEN COLOUR
-        public static Color Pen_Colour = Color.red;     // Change these to change the default drawing settings
-        // PEN WIDTH (actually, it's a radius, in pixels)
-        public static int Pen_Width = 10;
-
+        public Color Pen_Colour = Color.red;  
+        public int Pen_Width = 10;
+        public Color Reset_Colour = new Color(0, 0, 0, 0);  // By default, reset the canvas to be transparent
 
         public delegate void Brush_Function(Vector2 world_position);
         // This is the function called when a left click happens
@@ -29,7 +27,7 @@ namespace FreeDraw
 
         public bool Reset_Canvas_On_Play = true;
         // The colour the canvas is reset to each time
-        private Color Reset_Colour = new Color(0, 0, 0, 0);  // By default, reset the canvas to be transparent
+        
 
         // Used to reference THIS specific file without making all methods static
         public static Drawable drawable;
@@ -285,7 +283,7 @@ namespace FreeDraw
         {
             float pixCounter = 0;
             float nonClearPixels = 0;
-            if (Excavator.GetInstance().controlMode == Excavator.ControlMode.DRILL)
+            if (Excavator.GetInstance().controlMode == Excavator.ControlMode.DRILL && GetComponent<MineLine>() != null)
             {//TODO: currently, damage still counts towards progress. I guess that's fine?
                 Excavator chimera = Excavator.GetInstance();
                 MineLine mineLine = GetComponent<MineLine>();
