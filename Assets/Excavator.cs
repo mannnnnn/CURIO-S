@@ -50,7 +50,8 @@ public class Excavator : MonoBehaviour
     public void PickTool(int mode)
     {
         controlMode = (ControlMode)mode;
-        drawLayer.transform.localPosition = new Vector3(drawLayer.transform.localPosition.x, drawLayer.transform.localPosition.y, controlMode == ControlMode.MARKER ? -1 : -0.1f);  
+        drawLayer.GetComponent<BoxCollider2D>().enabled = controlMode == ControlMode.MARKER;
+        drawLayer.transform.localPosition = new Vector3(drawLayer.transform.localPosition.x, drawLayer.transform.localPosition.y, controlMode == ControlMode.MARKER ? -2 : -2f);  
     }
 
     public void ToggleScanner()
