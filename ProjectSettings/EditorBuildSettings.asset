@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Excavator.unity
+    guid: 5bf3b85f524a0054bbabfec87847e5ef
   m_configObjects: {}
