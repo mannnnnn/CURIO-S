@@ -42,10 +42,16 @@ namespace FreeDraw
         bool mouse_was_previously_held_down = false;
         bool no_drawing_on_current_drag = false;
 
+        Excavator chimera;
+        MineLine mineLine;
+        public void Start()
+        {
+            chimera = Excavator.GetInstance();
+            mineLine = GetComponent<MineLine>();
+        }
 
-
-//////////////////////////////////////////////////////////////////////////////
-// BRUSH TYPES. Implement your own here
+        //////////////////////////////////////////////////////////////////////////////
+        // BRUSH TYPES. Implement your own here
 
 
         // When you want to make your own type of brush effects,
@@ -281,12 +287,11 @@ namespace FreeDraw
         }
         public void ApplyMarkedPixelChanges()
         {
+
             float pixCounter = 0;
             float nonClearPixels = 0;
-            if (Excavator.GetInstance().controlMode == Excavator.ControlMode.DRILL && GetComponent<MineLine>() != null)
+            if (chimera.controlMode == Excavator.ControlMode.DRILL && mineLine != null)
             {//TODO: currently, damage still counts towards progress. I guess that's fine?
-                Excavator chimera = Excavator.GetInstance();
-                MineLine mineLine = GetComponent<MineLine>();
                 foreach (Color color in cur_colors)
                 {
                     if (color == Pen_Colour)
@@ -299,7 +304,11 @@ namespace FreeDraw
                         nonClearPixels += 1;
                     }
                 }
-                mineLine.ProgressUpdate(pixCounter / nonClearPixels);
+
+                if(mineLine.GetParent().progress != (pixCounter / nonClearPixels)){
+                    mineLine.ProgressUpdate(pixCounter / nonClearPixels);
+                }
+                
             }
 
 

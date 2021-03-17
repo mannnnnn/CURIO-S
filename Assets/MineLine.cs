@@ -17,6 +17,10 @@ public class MineLine : MonoBehaviour
         }
     }
 
+    public MineableObject GetParent()
+    {
+        return parent;
+    }
 
     public void OnMouseDown()
     {
