@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledMode: 1
+  enabledModes: 01000000
   Pen_Colour: {r: 1, g: 0, b: 0, a: 1}
   Pen_Width: 10
   Reset_Colour: {r: 0, g: 0, b: 0, a: 0}
@@ -1431,6 +1431,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1901997525}
+        m_MethodName: DrillPen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &804996442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledMode: 0
+  enabledModes: 
   Pen_Colour: {r: 1, g: 0, b: 0, a: 1}
   Pen_Width: 10
   Reset_Colour: {r: 0, g: 0, b: 0, a: 0}
@@ -1802,7 +1813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119128991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: 0.17, z: -1}
+  m_LocalPosition: {x: -2.13, y: 0.11, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 0.08023322}
   m_Children:
   - {fileID: 1160605534}
@@ -2858,25 +2869,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 392849460}
-        m_MethodName: SetMarkerBlue
+      - m_Target: {fileID: 1901997525}
+        m_MethodName: MarkerPen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 392849460}
-        m_MethodName: SetMarkerWidth
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3633,7 +3633,7 @@ GameObject:
   - component: {fileID: 1901997524}
   - component: {fileID: 1901997523}
   m_Layer: 8
-  m_Name: DirtLayer
+  m_Name: DrillableDirtLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3742,7 +3742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledMode: 1
+  enabledModes: 0000000001000000
   Pen_Colour: {r: 0, g: 0, b: 0, a: 0}
   Pen_Width: 20
   Reset_Colour: {r: 0.3584906, g: 0.26297864, b: 0.14542542, a: 1}
@@ -4564,7 +4564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571045d48cec88d48848f53bf379f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledMode: 1
+  enabledModes: 
   Pen_Colour: {r: 1, g: 0, b: 0, a: 1}
   Pen_Width: 10
   Reset_Colour: {r: 0, g: 0, b: 0, a: 0}

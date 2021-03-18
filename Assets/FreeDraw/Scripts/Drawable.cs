@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +13,7 @@ namespace FreeDraw
     // 4. Hold down left mouse to draw on this texture!
     public class Drawable : MonoBehaviour
     {
-        public Excavator.ControlMode enabledMode = Excavator.ControlMode.MARKER;
+        public List<Excavator.ControlMode> enabledModes = new List<Excavator.ControlMode>();
         public Color Pen_Colour = Color.red;  
         public int Pen_Width = 10;
         public Color Reset_Colour = new Color(0, 0, 0, 0);  // By default, reset the canvas to be transparent
@@ -188,7 +189,7 @@ namespace FreeDraw
         void Update()
         {
 
-            if(Excavator.GetInstance().controlMode != enabledMode)
+            if(!(enabledModes.Contains(Excavator.GetInstance().controlMode)))
             {
                 return;
             }
@@ -391,6 +392,16 @@ namespace FreeDraw
             // Should we reset our canvas image when we hit play in the editor?
             if (Reset_Canvas_On_Play)
                 ResetCanvas();
+        }
+
+        public void DrillPen()
+        {
+            Pen_Colour = Color.clear;
+        }
+
+        public void MarkerPen()
+        {
+            Pen_Colour = Color.green;
         }
     }
 }

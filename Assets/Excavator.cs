@@ -10,8 +10,6 @@ public class Excavator : MonoBehaviour
     private List<MineableObject> junk = new List<MineableObject>();
     public ControlMode controlMode = ControlMode.HAND;
     public GameObject scanner;
-    public GameObject drawLayer;
-
 
     [Header("DebugLabels")]
     public Text currNameLabel;
@@ -50,8 +48,6 @@ public class Excavator : MonoBehaviour
     public void PickTool(int mode)
     {
         controlMode = (ControlMode)mode;
-        drawLayer.GetComponent<BoxCollider2D>().enabled = controlMode == ControlMode.MARKER;
-        drawLayer.transform.localPosition = new Vector3(drawLayer.transform.localPosition.x, drawLayer.transform.localPosition.y, controlMode == ControlMode.MARKER ? -2 : -2f);  
     }
 
     public void ToggleScanner()
