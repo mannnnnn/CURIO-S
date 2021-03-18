@@ -19,23 +19,22 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             prevControl = Excavator.GetInstance().controlMode;
         }
-        Excavator.GetInstance().controlMode = Excavator.ControlMode.HAND;
+        Excavator.GetInstance().PickTool(Excavator.ControlMode.HAND);
         interacting = true;
     }
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        UnityEngine.Debug.Log("Pointer up!");
         if (interacting)
         {
-            Excavator.GetInstance().controlMode = prevControl;
+            Excavator.GetInstance().PickTool(prevControl);
         }
         interacting = false;
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        Excavator.GetInstance().controlMode = prevControl;
+        Excavator.GetInstance().PickTool(prevControl);
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -44,8 +43,8 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             prevControl = Excavator.GetInstance().controlMode;
         }
-       
-        Excavator.GetInstance().controlMode = Excavator.ControlMode.HAND;
+
+        Excavator.GetInstance().PickTool(Excavator.ControlMode.HAND);
         //prevent mining/drawing above or below scanner
     }
 

@@ -19,6 +19,10 @@ public class Excavator : MonoBehaviour
 
     public Color minedColor = Color.red;
 
+    public GameObject MarkerCursor;
+    public GameObject DrillCursor;
+    public GameObject HandCursor;
+
     public enum ControlMode //what the mouse/finger is controlling
     {
         MARKER,
@@ -33,8 +37,9 @@ public class Excavator : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false; //custom cursors are setup
         //Load in references to all the mineable objects, and sort them out
-        foreach(MineableObject obj in FindObjectsOfType<MineableObject>())
+        foreach (MineableObject obj in FindObjectsOfType<MineableObject>())
         {
             switch (obj.type) {
                 case MineableObject.Type.TREASURE:  treasures.Add(obj); break;
@@ -47,7 +52,33 @@ public class Excavator : MonoBehaviour
 
     public void PickTool(int mode)
     {
-        controlMode = (ControlMode)mode;
+        PickTool((ControlMode)mode);
+    }
+
+    public void PickTool(ControlMode mode)
+    {
+        controlMode = mode;
+
+        switch (controlMode)
+        {
+            case ControlMode.MARKER:
+                MarkerCursor.SetActive(true);
+                DrillCursor.SetActive(false);
+                HandCursor.SetActive(false);
+                break;
+            case ControlMode.DRILL:
+                MarkerCursor.SetActive(false);
+                DrillCursor.SetActive(true);
+                HandCursor.SetActive(false);
+                break;
+            case ControlMode.HAND:
+                MarkerCursor.SetActive(false);
+                DrillCursor.SetActive(false);
+                HandCursor.SetActive(true);
+                break;
+            default: break;
+        }
+
     }
 
     public void ToggleScanner()
