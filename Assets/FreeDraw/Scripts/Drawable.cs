@@ -260,7 +260,7 @@ namespace FreeDraw
             int center_x = (int)center_pixel.x;
             int center_y = (int)center_pixel.y;
             //int extra_radius = Mathf.Min(0, pen_thickness - 2);
-            // float multiplier = Mathf.Cos(Mathf.PI * (x / (x + pen_thickness)));
+            // 
 
             /* for (int y = center_y - (int)(pen_thickness* multiplier); y <= center_y +(int) (pen_thickness* multiplier); y++)
              {
@@ -272,33 +272,46 @@ namespace FreeDraw
             for (int x = center_x - pen_thickness/2; x <= center_x + pen_thickness/2; x++)
             {
                 localX+=1;
-
+                int curve = (int)(Mathf.Sin(Mathf.PI * ((float)localX / (float)pen_thickness)) * pen_thickness);
+                float multiplier = 1;
+               
                 // Check if the X wraps around the image, so we don't draw pixels on the other side of the image
                 if (x >= (int)drawable_sprite.rect.width || x < 0)
                     continue;
 
+                /*
                 if (x < center_x)
                 {
-                    for (int y = -localX; y <= localX; y++)
+                    for (int y = -localX - curve; y <= localX + curve; y++)
                     {
                         MarkPixelToChange(x, center_y + y, color_of_pen);
                     }
                 } else
                 {
-                    for (int y = -(pen_thickness - localX); y <= pen_thickness - localX; y++)
+                    for (int y = -(pen_thickness - localX)- curve; y <= (pen_thickness - localX)+ curve; y++)
+                    {
+                        MarkPixelToChange(x, center_y + y, color_of_pen);
+                    }
+                }
+                */
+
+                if (x < center_x)
+                {
+                    multiplier =  1+1f*(Mathf.Cos(Mathf.PI * ((float)localX / (float)pen_thickness / 2)));
+                    for (int y = (int)(-localX * multiplier); y <= localX * multiplier; y++)
+                    {
+                        MarkPixelToChange(x, center_y + y, color_of_pen);
+                    }
+                }
+                else
+                {
+                    multiplier = 1+1f*(Mathf.Cos(Mathf.PI * ((float)(pen_thickness - localX) / (float)pen_thickness / 2)));
+                    for (int y = (int)(-(pen_thickness - localX)* multiplier); y <= (pen_thickness - localX) * multiplier; y++)
                     {
                         MarkPixelToChange(x, center_y + y, color_of_pen);
                     }
                 }
 
-                /*
-                else {
-                    for (int y = pen_thickness - (localX - pen_thickness/2); y <= pen_thickness + (localX - pen_thickness / 2); y++)
-                    {
-                        MarkPixelToChange(x, center_y + y, color_of_pen);
-                    }
-                }*/
-               
             }
 
            
