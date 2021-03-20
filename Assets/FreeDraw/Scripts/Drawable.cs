@@ -99,45 +99,28 @@ namespace FreeDraw
 
         public void CURIOSpen(Vector2 world_position)
         {
+            UnityEngine.Debug.Log("Custom pen!");
             Vector2 pixel_pos = WorldToPixelCoordinates(world_position);
             cur_colors = drawable_texture.GetPixels32();
 
-            ////////////////////////////////////////////////////////////////
-            // FILL IN CODE BELOW HERE
-
-            // Do we care about the user left clicking and dragging?
-            // If you don't, simply set the below if statement to be:
-            //if (true)
-
             Color BleedColor = Color.red;
-            float offset = 40;
+            float offset = Pen_Width;
             // If you do care about dragging, use the below if/else structure
+            Vector2 adjustedPixelPos = new Vector2(pixel_pos.x, pixel_pos.y+offset);
             if (previous_drag_position == Vector2.zero)
             {
-                // THIS IS THE FIRST CLICK
-                // FILL IN WHATEVER YOU WANT TO DO HERE
-                // Maybe mark multiple pixels to colour?
-
-
-                MarkPixelsToColour(pixel_pos, Pen_Width, Pen_Colour);
-                MarkPixelsToColour(pixel_pos * (Vector2.up * offset), Pen_Width, BleedColor);
-                MarkPixelsToColour(pixel_pos * (Vector2.left * offset), Pen_Width, BleedColor);
+                MarkPixelsToColourCircle(pixel_pos, Pen_Width, Pen_Colour);
+              //  MarkPixelsToColour(adjustedPixelPos, Pen_Width, Pen_Colour);
+               // MarkPixelsToColour(pixel_pos * (Vector2.left * offset), Pen_Width, Pen_Colour);
             }
             else
             {
-                // THE USER IS DRAGGING
-                // Should we do stuff between the previous mouse position and the current one?
-                ColourBetween(previous_drag_position, pixel_pos, Pen_Width, Pen_Colour);
-                ColourBetween(previous_drag_position * (Vector2.up * offset), pixel_pos * (Vector2.up * offset), Pen_Width, BleedColor);
-                ColourBetween(previous_drag_position * (Vector2.left * offset), pixel_pos * (Vector2.left *offset), Pen_Width, BleedColor);
+                ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width, Pen_Colour);
+               // ColourBetween(new Vector2(previous_drag_position.x, previous_drag_position.y), adjustedPixelPos, Pen_Width, Pen_Colour);
+               // ColourBetween(previous_drag_position * (Vector2.left * offset), pixel_pos * (Vector2.left *offset), Pen_Width, Pen_Colour);
             }
-            ////////////////////////////////////////////////////////////////
-
-            // 3. Actually apply the changes we marked earlier
-            // Done here to be more efficient
+           
             ApplyMarkedPixelChanges();
-
-            // 4. If dragging, update where we were previously
             previous_drag_position = pixel_pos;
         }
 
@@ -175,7 +158,7 @@ namespace FreeDraw
         public void SetPenBrush()
         {
             // PenBrush is the NAME of the method we want to set as our current brush
-            current_brush = PenBrush;
+            current_brush = CURIOSpen;
         }
 //////////////////////////////////////////////////////////////////////////////
 
@@ -252,8 +235,74 @@ namespace FreeDraw
             }
         }
 
+        public void ColourBetweenCircle(Vector2 start_point, Vector2 end_point, int width, Color color)
+        {
+            // Get the distance from start to finish
+            float distance = Vector2.Distance(start_point, end_point);
+            Vector2 direction = (start_point - end_point).normalized;
+
+            Vector2 cur_position = start_point;
+
+            // Calculate how many times we should interpolate between start_point and end_point based on the amount of time that has passed since the last update
+            float lerp_steps = 1 / distance;
+
+            for (float lerp = 0; lerp <= 1; lerp += lerp_steps)
+            {
+                cur_position = Vector2.Lerp(start_point, end_point, lerp);
+                MarkPixelsToColourCircle(cur_position, width, color);
+            }
+        }
 
 
+        public void MarkPixelsToColourCircle(Vector2 center_pixel, int pen_thickness, Color color_of_pen)
+        {
+            // Figure out how many pixels we need to colour in each direction (x and y)
+            int center_x = (int)center_pixel.x;
+            int center_y = (int)center_pixel.y;
+            //int extra_radius = Mathf.Min(0, pen_thickness - 2);
+            // float multiplier = Mathf.Cos(Mathf.PI * (x / (x + pen_thickness)));
+
+            /* for (int y = center_y - (int)(pen_thickness* multiplier); y <= center_y +(int) (pen_thickness* multiplier); y++)
+             {
+                 MarkPixelToChange(x, y, color_of_pen);
+             }*/
+
+            int localX = 0;
+
+            for (int x = center_x - pen_thickness/2; x <= center_x + pen_thickness/2; x++)
+            {
+                localX+=1;
+
+                // Check if the X wraps around the image, so we don't draw pixels on the other side of the image
+                if (x >= (int)drawable_sprite.rect.width || x < 0)
+                    continue;
+
+                if (x < center_x)
+                {
+                    for (int y = -localX; y <= localX; y++)
+                    {
+                        MarkPixelToChange(x, center_y + y, color_of_pen);
+                    }
+                } else
+                {
+                    for (int y = -(pen_thickness - localX); y <= pen_thickness - localX; y++)
+                    {
+                        MarkPixelToChange(x, center_y + y, color_of_pen);
+                    }
+                }
+
+                /*
+                else {
+                    for (int y = pen_thickness - (localX - pen_thickness/2); y <= pen_thickness + (localX - pen_thickness / 2); y++)
+                    {
+                        MarkPixelToChange(x, center_y + y, color_of_pen);
+                    }
+                }*/
+               
+            }
+
+           
+        }
 
 
         public void MarkPixelsToColour(Vector2 center_pixel, int pen_thickness, Color color_of_pen)
@@ -374,7 +423,7 @@ namespace FreeDraw
         {
             drawable = this;
             // DEFAULT BRUSH SET HERE
-            current_brush = PenBrush;
+            current_brush = CURIOSpen;
 
             drawable_sprite = this.GetComponent<SpriteRenderer>().sprite;
             drawable_texture = drawable_sprite.texture;
