@@ -57,6 +57,7 @@ public class MineableObject : MonoBehaviour
             }
         }
         interacting = true;
+       
         UpdateDebugLabels();
     }
 
@@ -93,22 +94,36 @@ public class MineableObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(cursorTool == Excavator.ControlMode.DRILL && interacting && !broken)
+        if(cursorTool == Excavator.ControlMode.DRILL && interacting)
         {
             //damage has occurred!
-            //TODO: bad vfx+sfx
-            quality -= fragility;
-            if(quality <= failureThreshold)
+            if (chimera.currSoundClip != "bone crunch")
             {
-                broken = true;
-                quality = failureThreshold;
+                //chimera.PlaySFX("bone crunch");
             }
-            if (!removeable)
+               
+
+            if (!broken)
             {
-                removeable = progress >= completionThreshold;
+                quality -= fragility;
+                if (quality <= failureThreshold)
+                {
+                    broken = true;
+                    quality = failureThreshold;
+                }
+                if (!removeable)
+                {
+                    removeable = progress >= completionThreshold;
+                }
+
+                UpdateDebugLabels();
             }
-           
-            UpdateDebugLabels();
+        } else
+        {
+            if(chimera.currSoundClip == "bone crunch")
+            {
+                //chimera.StopSFX();
+            }
         }
     }
 }

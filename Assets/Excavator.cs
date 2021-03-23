@@ -23,6 +23,17 @@ public class Excavator : MonoBehaviour
     public GameObject DrillCursor;
     public GameObject HandCursor;
 
+    public List<SFXSet> sfx = new List<SFXSet>();
+    public AudioSource audioSource;
+    public string currSoundClip = "";
+
+    [System.Serializable]
+    public class SFXSet{
+        public string sfxName = "";
+        public AudioClip audio;
+        public bool loopUntilCancelled = false; //sfx will play until the event comes in to stop it
+    }
+
     public enum ControlMode //what the mouse/finger is controlling
     {
         MARKER,
@@ -38,6 +49,7 @@ public class Excavator : MonoBehaviour
     void Start()
     {
         Cursor.visible = false; //custom cursors are setup
+        audioSource = GetComponent<AudioSource>();
         //Load in references to all the mineable objects, and sort them out
         foreach (MineableObject obj in FindObjectsOfType<MineableObject>())
         {
@@ -58,7 +70,7 @@ public class Excavator : MonoBehaviour
     public void PickTool(ControlMode mode)
     {
         controlMode = mode;
-
+        PlaySFX("pick tool");
         switch (controlMode)
         {
             case ControlMode.MARKER:
@@ -86,9 +98,27 @@ public class Excavator : MonoBehaviour
         scanner.SetActive(!scanner.active);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PlaySFX(string sfxEvent){
+       foreach(SFXSet set in sfx)
+        {
+            if(set.sfxName == sfxEvent)
+            {
+                audioSource.clip = set.audio;
+                audioSource.loop = set.loopUntilCancelled;
+            }
+        }
+       if(audioSource.clip != null)
+        {
+            currSoundClip = audioSource.loop ? sfxEvent : "";
+            audioSource.Play();
+            
+        }
     }
+
+    public void StopSFX()
+    {
+        audioSource.Stop();
+        currSoundClip = "";
+    }
+
 }

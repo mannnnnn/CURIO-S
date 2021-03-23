@@ -108,6 +108,7 @@ namespace FreeDraw
             Vector2 adjustedPixelPos = new Vector2(pixel_pos.x, pixel_pos.y+offset);
             if (previous_drag_position == Vector2.zero)
             {
+                if(chimera.controlMode == Excavator.ControlMode.DRILL)
                 MarkPixelsToColourCircle(pixel_pos, Pen_Width, BleedColor);
                 MarkPixelsToColourCircle(pixel_pos, Pen_Width/2, Pen_Colour);
                
@@ -116,6 +117,7 @@ namespace FreeDraw
             }
             else
             {
+                if (chimera.controlMode == Excavator.ControlMode.DRILL)
                 ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width, BleedColor);
                 ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width/2, Pen_Colour);
                // ColourBetween(new Vector2(previous_drag_position.x, previous_drag_position.y), adjustedPixelPos, Pen_Width, Pen_Colour);
@@ -181,8 +183,19 @@ namespace FreeDraw
 
             // Is the user holding down the left mouse button?
             bool mouse_held_down = Input.GetMouseButton(0);
+
+            if (!mouse_held_down && chimera.currSoundClip == "drill")
+            {
+                chimera.StopSFX();
+            }
+
             if (mouse_held_down && !no_drawing_on_current_drag)
             {
+                if(chimera.controlMode == Excavator.ControlMode.DRILL && chimera.currSoundClip == "")
+                {
+                    chimera.PlaySFX("drill");
+                }
+
                 // Convert mouse coordinates to world coordinates
                 Vector2 mouse_world_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
