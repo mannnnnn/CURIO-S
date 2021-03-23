@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class MineableObject : MonoBehaviour
 {
 
-    public enum Type
+    public enum Classification
     {
         DEFAULT,
         TREASURE,
@@ -14,7 +14,8 @@ public class MineableObject : MonoBehaviour
         HAZARD
     }
 
-    public Type type = Type.DEFAULT;
+    public TreasureBook.FossilType type = TreasureBook.FossilType.DEFAULT;
+    public Classification classification = Classification.DEFAULT;
     private float quality = 1; //100%  //the score for this piece
     public float progress = 0; //0%  //how far into the successful excavation you are
     public float completionThreshold = 0.80f; //80% //when this piece can be removed
@@ -34,6 +35,8 @@ public class MineableObject : MonoBehaviour
 
     public void Remove()
     {
+        TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
+        PlayerInfo.GetInstance().CollectFossil(fossil);
         //TODO: play remove animation
         //TODO: play some sfx
         Destroy(this.gameObject);
@@ -44,7 +47,7 @@ public class MineableObject : MonoBehaviour
         cursorTool = Excavator.GetInstance().controlMode;
         if (cursorTool == Excavator.ControlMode.HAND)
         {
-            if(progress >= completionThreshold && !broken)
+            if(removeable && !broken)
             {
                 Remove();
             } else
@@ -100,6 +103,11 @@ public class MineableObject : MonoBehaviour
                 broken = true;
                 quality = failureThreshold;
             }
+            if (!removeable)
+            {
+                removeable = progress >= completionThreshold;
+            }
+           
             UpdateDebugLabels();
         }
     }

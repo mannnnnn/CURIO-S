@@ -99,7 +99,6 @@ namespace FreeDraw
 
         public void CURIOSpen(Vector2 world_position)
         {
-            UnityEngine.Debug.Log("Custom pen!");
             Vector2 pixel_pos = WorldToPixelCoordinates(world_position);
             cur_colors = drawable_texture.GetPixels32();
 

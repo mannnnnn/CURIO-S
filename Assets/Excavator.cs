@@ -41,9 +41,9 @@ public class Excavator : MonoBehaviour
         //Load in references to all the mineable objects, and sort them out
         foreach (MineableObject obj in FindObjectsOfType<MineableObject>())
         {
-            switch (obj.type) {
-                case MineableObject.Type.TREASURE:  treasures.Add(obj); break;
-                case MineableObject.Type.TRASH:
+            switch (obj.classification) {
+                case MineableObject.Classification.TREASURE:  treasures.Add(obj); break;
+                case MineableObject.Classification.TRASH:
                 default: junk.Add(obj); break;
             }
             
