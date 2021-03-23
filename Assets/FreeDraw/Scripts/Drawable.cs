@@ -102,19 +102,22 @@ namespace FreeDraw
             Vector2 pixel_pos = WorldToPixelCoordinates(world_position);
             cur_colors = drawable_texture.GetPixels32();
 
-            Color BleedColor = Color.red;
-            float offset = Pen_Width;
+            Color BleedColor = new Color (0,0,0,0.5f);
+            int offset = Pen_Width;
             // If you do care about dragging, use the below if/else structure
             Vector2 adjustedPixelPos = new Vector2(pixel_pos.x, pixel_pos.y+offset);
             if (previous_drag_position == Vector2.zero)
             {
-                MarkPixelsToColourCircle(pixel_pos, Pen_Width, Pen_Colour);
-              //  MarkPixelsToColour(adjustedPixelPos, Pen_Width, Pen_Colour);
-               // MarkPixelsToColour(pixel_pos * (Vector2.left * offset), Pen_Width, Pen_Colour);
+                MarkPixelsToColourCircle(pixel_pos, Pen_Width, BleedColor);
+                MarkPixelsToColourCircle(pixel_pos, Pen_Width/2, Pen_Colour);
+               
+                //  MarkPixelsToColour(adjustedPixelPos, Pen_Width, Pen_Colour);
+                // MarkPixelsToColour(pixel_pos * (Vector2.left * offset), Pen_Width, Pen_Colour);
             }
             else
             {
-                ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width, Pen_Colour);
+                ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width, BleedColor);
+                ColourBetweenCircle(previous_drag_position, pixel_pos, Pen_Width/2, Pen_Colour);
                // ColourBetween(new Vector2(previous_drag_position.x, previous_drag_position.y), adjustedPixelPos, Pen_Width, Pen_Colour);
                // ColourBetween(previous_drag_position * (Vector2.left * offset), pixel_pos * (Vector2.left *offset), Pen_Width, Pen_Colour);
             }
@@ -345,7 +348,11 @@ namespace FreeDraw
             if (array_pos > cur_colors.Length || array_pos < 0)
                 return;
 
-            cur_colors[array_pos] = color;
+            if(cur_colors[array_pos] != Color.clear) //don't color on space that doesn't exist
+            {
+                cur_colors[array_pos] = color;
+            }
+           
         }
         public void ApplyMarkedPixelChanges()
         {
