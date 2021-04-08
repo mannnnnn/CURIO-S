@@ -23,6 +23,8 @@ public class Excavator : MonoBehaviour
     public GameObject DrillCursor;
     public GameObject HandCursor;
 
+    Animator drillAnim;
+
     public List<SFXSet> sfx = new List<SFXSet>();
     public AudioSource audioSource;
     public string currSoundClip = "";
@@ -48,6 +50,7 @@ public class Excavator : MonoBehaviour
 
     void Start()
     {
+        drillAnim = DrillCursor.GetComponentInChildren<Animator>();
         Cursor.visible = false; //custom cursors are setup
         audioSource = GetComponent<AudioSource>();
         //Load in references to all the mineable objects, and sort them out
@@ -65,6 +68,14 @@ public class Excavator : MonoBehaviour
     public void PickTool(int mode)
     {
         PickTool((ControlMode)mode);
+    }
+
+    public void Update()
+    {
+        if (controlMode == ControlMode.DRILL && ((Input.GetMouseButton(0) && !drillAnim.GetBool("Drilling")) || (!Input.GetMouseButton(0) && drillAnim.GetBool("Drilling"))))
+        {
+            RunDrill();
+        } 
     }
 
     public void PickTool(ControlMode mode)
@@ -96,6 +107,12 @@ public class Excavator : MonoBehaviour
     public void ToggleScanner()
     {
         scanner.SetActive(!scanner.active);
+    }
+
+    public void RunDrill()
+    {
+        Animator drillAnim = DrillCursor.GetComponentInChildren<Animator>();
+        drillAnim.SetBool("Drilling", !drillAnim.GetBool("Drilling")); 
     }
 
     public void PlaySFX(string sfxEvent){
