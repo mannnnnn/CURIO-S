@@ -7,7 +7,7 @@ public class TreasureBook : ScriptableObject
 {
 
     public List<Fossil> fossils = new List<Fossil>();
-
+    public List<GameObject> fossilPrefabs = new List<GameObject>();
 
     [System.Serializable]
     public class MinedFossil
@@ -31,12 +31,13 @@ public class TreasureBook : ScriptableObject
         public string name = "";
         public string desc = "Doo do daat dat-";
         public MineableObject.Classification classification = MineableObject.Classification.TREASURE;
+        public int prefabIndex = -1;
+        public float[] xy;
     }
 
     [System.Serializable]
     public enum FossilType{
         DEFAULT,
-        CAN_OF_BEANS,
         STEGALOMANIAC,
         DATRIRAPTOR,
         MESODIPUS,

@@ -1311,17 +1311,17 @@ PrefabInstance:
     - target: {fileID: 79840325905709279, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
       propertyPath: m_Name
-      value: Datriraptor
+      value: Datriraptor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709280, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.33
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709280, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709280, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
@@ -6047,6 +6047,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[4].Array.data[39].y
       value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 79840325905709282, guid: a0f3be8b717fc7f47b89dba4009b4984,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 79840325905709282, guid: a0f3be8b717fc7f47b89dba4009b4984,
+        type: 3}
+      propertyPath: classification
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 79840325905709282, guid: a0f3be8b717fc7f47b89dba4009b4984,
+        type: 3}
+      propertyPath: completionThreshold
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709283, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}

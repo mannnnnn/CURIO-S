@@ -1,0 +1,725 @@
+fileFormatVersion: 2
+guid: 7a6bdff40771fd6419e6537fdf84e365
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6238536508793740559
+    second: Treasures1_0
+  - first:
+      213: -9201733649700018261
+    second: Treasures1_1
+  - first:
+      213: -1568638221372242848
+    second: Treasures1_2
+  - first:
+      213: 8398862855918999338
+    second: Treasures1_3
+  - first:
+      213: -7995746212600263114
+    second: Treasures1_4
+  - first:
+      213: -6327906204971294205
+    second: Treasures1_5
+  - first:
+      213: -3863293722784348063
+    second: Treasures1_6
+  - first:
+      213: -2048984213834616944
+    second: Treasures1_7
+  - first:
+      213: 6054366861262026957
+    second: Treasures1_8
+  - first:
+      213: 389527547581473057
+    second: Treasures1_9
+  - first:
+      213: 5377930256395652000
+    second: Treasures1_10
+  - first:
+      213: 6520690533007125509
+    second: Treasures1_11
+  - first:
+      213: 2402599201175358526
+    second: Treasures1_12
+  - first:
+      213: -7403895376955524585
+    second: Treasures1_13
+  - first:
+      213: 2103465297598726036
+    second: Treasures1_14
+  - first:
+      213: -6158814222814340780
+    second: Treasures1_15
+  - first:
+      213: 7296930178504924918
+    second: Treasures1_16
+  - first:
+      213: -2818289773082199708
+    second: Treasures1_17
+  - first:
+      213: 8087791072826656636
+    second: Treasures1_18
+  - first:
+      213: -5568589276524277431
+    second: Treasures1_19
+  - first:
+      213: -7118478639918249906
+    second: Treasures1_20
+  - first:
+      213: 4809137521293944628
+    second: Treasures1_21
+  - first:
+      213: -6979079228437625749
+    second: Treasures1_22
+  - first:
+      213: -8085806274338447915
+    second: Treasures1_0
+  - first:
+      213: 6629937796372723864
+    second: Treasures1_1
+  - first:
+      213: -8284555763819534228
+    second: Treasures1_2
+  - first:
+      213: -7329341272348068043
+    second: Treasures1_3
+  - first:
+      213: 1506813019847252564
+    second: Treasures1_4
+  - first:
+      213: 4975882702649396916
+    second: Treasures1_5
+  - first:
+      213: -8043220615177317417
+    second: Treasures1_6
+  - first:
+      213: 8377169559047939166
+    second: Treasures1_7
+  - first:
+      213: 7550678671626063125
+    second: Treasures1_8
+  - first:
+      213: 4328369822637744181
+    second: Treasures1_9
+  - first:
+      213: -1950839097669117111
+    second: Treasures1_10
+  - first:
+      213: -7472543081078227440
+    second: Treasures1_11
+  - first:
+      213: -5393769277131910886
+    second: Treasures1_12
+  - first:
+      213: 6394004578175571668
+    second: Treasures1_13
+  - first:
+      213: 8502697003970996906
+    second: Treasures1_14
+  - first:
+      213: 2022876495766658275
+    second: Treasures1_15
+  - first:
+      213: 4391978043949554659
+    second: Treasures1_16
+  - first:
+      213: 8462431675589927478
+    second: Treasures1_17
+  - first:
+      213: -4540525836149778811
+    second: Treasures1_18
+  - first:
+      213: 3556676167833500052
+    second: Treasures1_19
+  - first:
+      213: 7299246263166404946
+    second: Treasures1_20
+  - first:
+      213: 6190731874293523704
+    second: Treasures1_21
+  - first:
+      213: 4031466528903712573
+    second: Treasures1_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Treasures1_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 440
+        width: 126
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd9e6fa80279cf80800000000000000
+      internalID: -8085806274338447915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 418
+        width: 168
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8987bb38c45420c50800000000000000
+      internalID: 6629937796372723864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 432
+        width: 157
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c682f9f1d68570d80800000000000000
+      internalID: -8284555763819534228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 320
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537751002f2f84a90800000000000000
+      internalID: -7329341272348068043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 286
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45adde6457649e410800000000000000
+      internalID: 1506813019847252564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 269
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be8d6764f2ed0540800000000000000
+      internalID: 4975882702649396916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 329
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3d14e177db06090800000000000000
+      internalID: -8043220615177317417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_7
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 301
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54a44e645fa14470800000000000000
+      internalID: 8377169559047939166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_8
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 314
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51dc3632f3669c860800000000000000
+      internalID: 7550678671626063125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 239
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530e7d6cb65711c30800000000000000
+      internalID: 4328369822637744181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 209
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b1d793d2a3de4e0800000000000000
+      internalID: -1950839097669117111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_11
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 256
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e7783b8a13c4890800000000000000
+      internalID: -7472543081078227440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_12
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 212
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11132c7b6b7525b0800000000000000
+      internalID: -5393769277131910886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_13
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 210
+        width: 75
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6506679411cb850800000000000000
+      internalID: 6394004578175571668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_14
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 205
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa287a30e5aff570800000000000000
+      internalID: 8502697003970996906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 98
+        width: 84
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec98aa8473b21c10800000000000000
+      internalID: 2022876495766658275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_16
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 133
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb9de2e2c073fc30800000000000000
+      internalID: 4391978043949554659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_17
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 87
+        width: 60
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6322d87e5c8907570800000000000000
+      internalID: 8462431675589927478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 88
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5861fca0fcfccf0c0800000000000000
+      internalID: -4540525836149778811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2
+        width: 74
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49930dc612adb5130800000000000000
+      internalID: 3556676167833500052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_20
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 34
+        width: 85
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2598124adc12c4560800000000000000
+      internalID: 7299246263166404946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_21
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 24
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f424faf6d5e9e550800000000000000
+      internalID: 6190731874293523704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasures1_22
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 23
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fce2bc275a2f730800000000000000
+      internalID: 4031466528903712573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

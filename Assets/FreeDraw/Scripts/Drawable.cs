@@ -482,7 +482,7 @@ namespace FreeDraw
 
         public void MarkerPen()
         {
-            Pen_Colour = Color.green;
+            Pen_Colour = Color.white;
         }
     }
 }

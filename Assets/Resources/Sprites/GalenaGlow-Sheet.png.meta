@@ -1,12 +1,120 @@
 fileFormatVersion: 2
 guid: f779c4c52cf205f4e9bd573d6876a84d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7179479176113198417
+    second: GalenaGlow-Sheet_0
+  - first:
+      213: 7861304167190639676
+    second: GalenaGlow-Sheet_1
+  - first:
+      213: 7788367701708336308
+    second: GalenaGlow-Sheet_2
+  - first:
+      213: 7528992406439645159
+    second: GalenaGlow-Sheet_3
+  - first:
+      213: -7410794995287621093
+    second: GalenaGlow-Sheet_4
+  - first:
+      213: 969809860473172503
+    second: GalenaGlow-Sheet_5
+  - first:
+      213: 8206959133151583901
+    second: GalenaGlow-Sheet_6
+  - first:
+      213: 5020513046124893504
+    second: GalenaGlow-Sheet_7
+  - first:
+      213: -5853767885174384503
+    second: GalenaGlow-Sheet_8
+  - first:
+      213: 6032070343269538071
+    second: GalenaGlow-Sheet_9
+  - first:
+      213: 3051265663199929564
+    second: GalenaGlow-Sheet_10
+  - first:
+      213: 8611538682579599105
+    second: GalenaGlow-Sheet_11
+  - first:
+      213: 1908939754301396616
+    second: GalenaGlow-Sheet_12
+  - first:
+      213: 2780785033560960397
+    second: GalenaGlow-Sheet_13
+  - first:
+      213: -5679578897606050611
+    second: GalenaGlow-Sheet_14
+  - first:
+      213: -7423103137264426062
+    second: GalenaGlow-Sheet_15
+  - first:
+      213: 3418279690614783445
+    second: GalenaGlow-Sheet_16
+  - first:
+      213: -4063341179054908826
+    second: GalenaGlow-Sheet_17
+  - first:
+      213: -5286108992594068390
+    second: GalenaGlow-Sheet_18
+  - first:
+      213: 5506259148383987439
+    second: GalenaGlow-Sheet_19
+  - first:
+      213: 3352352258883190405
+    second: GalenaGlow-Sheet_20
+  - first:
+      213: -5894023934270443005
+    second: GalenaGlow-Sheet_21
+  - first:
+      213: -366136921786174217
+    second: GalenaGlow-Sheet_22
+  - first:
+      213: 7835039508749025791
+    second: GalenaGlow-Sheet_23
+  - first:
+      213: -2974458708290664679
+    second: GalenaGlow-Sheet_24
+  - first:
+      213: -5796266089228896757
+    second: GalenaGlow-Sheet_25
+  - first:
+      213: -8586629641241137230
+    second: GalenaGlow-Sheet_26
+  - first:
+      213: 7130365924851093668
+    second: GalenaGlow-Sheet_27
+  - first:
+      213: 7953230894168231581
+    second: GalenaGlow-Sheet_28
+  - first:
+      213: 4028189819107463985
+    second: GalenaGlow-Sheet_29
+  - first:
+      213: 2637844414008893187
+    second: GalenaGlow-Sheet_30
+  - first:
+      213: 4750978975091623549
+    second: GalenaGlow-Sheet_31
+  - first:
+      213: -4715238800262765217
+    second: GalenaGlow-Sheet_32
+  - first:
+      213: -6546339700055341143
+    second: GalenaGlow-Sheet_33
+  - first:
+      213: -9148491778096302046
+    second: GalenaGlow-Sheet_34
+  - first:
+      213: 6713849008879960499
+    second: GalenaGlow-Sheet_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +139,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +157,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -71,13 +179,277 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa65735abd5d5c90800000000000000
+      internalID: -7179479176113198417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3432b43d76f81d60800000000000000
+      internalID: 7861304167190639676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc63700927d51c60800000000000000
+      internalID: 7788367701708336308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efc27e04ba5c7860800000000000000
+      internalID: 7528992406439645159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1283a24731972990800000000000000
+      internalID: -7410794995287621093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712bc290ee4757d00800000000000000
+      internalID: 969809860473172503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ed5a969d9f4e170800000000000000
+      internalID: 8206959133151583901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0451d7004027ca540800000000000000
+      internalID: 5020513046124893504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988579e7f1d33cea0800000000000000
+      internalID: -5853767885174384503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719dfb6940836b350800000000000000
+      internalID: 6032070343269538071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4e06254f5485a20800000000000000
+      internalID: 3051265663199929564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalenaGlow-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 22
+        width: 39
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f31b05ec4528770800000000000000
+      internalID: 8611538682579599105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

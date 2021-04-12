@@ -13,8 +13,26 @@ MonoBehaviour:
   m_Name: TreasureBook
   m_EditorClassIdentifier: 
   fossils:
-  - type: 3
+  - type: 0
+    name: It's something
+    desc: proabbly nothing good
+    classification: 1
+    prefabIndex: 0
+    xy: []
+  - type: 1
+    name: Stegalomaniac
+    desc: Duh da da da
+    classification: 1
+    prefabIndex: 1
+    xy: []
+  - type: 2
     name: Datriraptor
     desc: A bird of prey, or perhaps a lizard. You aren't a biologist. All you know
       is you probably don't want to meet one out in the wild.
     classification: 1
+    prefabIndex: 2
+    xy: []
+  fossilPrefabs:
+  - {fileID: 1832475428084072, guid: c1bee09c88207064ca42d6ebc274c572, type: 3}
+  - {fileID: 6419934281106518087, guid: 974d41bc5c6850448a670c6ab7043ec1, type: 3}
+  - {fileID: 8192108729735311704, guid: 689676994fa5ea346ba31ff44ae22e87, type: 3}
