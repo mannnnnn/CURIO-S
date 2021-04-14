@@ -54,7 +54,7 @@ public class LevelLoader : Editor
         file.Close();
     }
 
-    private bool LoadLevel(int level)
+    public bool LoadLevel(int level)
     {
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {

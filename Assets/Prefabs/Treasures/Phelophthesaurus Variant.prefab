@@ -1796,7 +1796,7 @@ PrefabInstance:
     - target: {fileID: 6419934281106518087, guid: 974d41bc5c6850448a670c6ab7043ec1,
         type: 3}
       propertyPath: m_Name
-      value: Phelophthesaurus
+      value: Phelophthesaurus Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6419934281106518136, guid: 974d41bc5c6850448a670c6ab7043ec1,
         type: 3}
@@ -4822,6 +4822,16 @@ PrefabInstance:
         type: 3}
       propertyPath: completionThreshold
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419934281106518138, guid: 974d41bc5c6850448a670c6ab7043ec1,
+        type: 3}
+      propertyPath: type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419934281106518138, guid: 974d41bc5c6850448a670c6ab7043ec1,
+        type: 3}
+      propertyPath: classification
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6419934281106518139, guid: 974d41bc5c6850448a670c6ab7043ec1,
         type: 3}

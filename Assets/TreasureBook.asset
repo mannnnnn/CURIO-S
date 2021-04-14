@@ -32,7 +32,42 @@ MonoBehaviour:
     classification: 1
     prefabIndex: 2
     xy: []
+  - type: 3
+    name: Mesodipus
+    desc: Big bird bad bird
+    classification: 1
+    prefabIndex: 3
+    xy: []
+  - type: 4
+    name: Orneroptyrix
+    desc: Scary bat
+    classification: 1
+    prefabIndex: 4
+    xy: []
+  - type: 5
+    name: Phelopthesaurus
+    desc: Who named this
+    classification: 1
+    prefabIndex: 5
+    xy: []
+  - type: 6
+    name: Teragnathus
+    desc: Tooth
+    classification: 1
+    prefabIndex: 6
+    xy: []
+  - type: 7
+    name: Vilactasaurus
+    desc: The best boy
+    classification: 1
+    prefabIndex: 7
+    xy: []
   fossilPrefabs:
   - {fileID: 1832475428084072, guid: c1bee09c88207064ca42d6ebc274c572, type: 3}
   - {fileID: 6419934281106518087, guid: 974d41bc5c6850448a670c6ab7043ec1, type: 3}
   - {fileID: 8192108729735311704, guid: 689676994fa5ea346ba31ff44ae22e87, type: 3}
+  - {fileID: 8726245369723799974, guid: d6e934f6808e57e449651e1dfc15864b, type: 3}
+  - {fileID: 5052560457946520287, guid: 5dff61a8cf7fbca449d893f103708f49, type: 3}
+  - {fileID: 3742871617524098213, guid: 8eb0275f103e51d499da1dd1f4ba254d, type: 3}
+  - {fileID: 63070007226839029, guid: ae6eb1c89956a1549b0b22316664664e, type: 3}
+  - {fileID: 8114437571833275886, guid: 707acabfac7abd943a9c252bd73d0ce6, type: 3}

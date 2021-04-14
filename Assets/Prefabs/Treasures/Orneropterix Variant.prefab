@@ -1546,7 +1546,7 @@ PrefabInstance:
     - target: {fileID: 79840325905709279, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
       propertyPath: m_Name
-      value: Orneropterix
+      value: Orneropterix Variant
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709280, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}
@@ -15717,6 +15717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 79840325905709282, guid: a0f3be8b717fc7f47b89dba4009b4984,
+        type: 3}
+      propertyPath: classification
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 79840325905709283, guid: a0f3be8b717fc7f47b89dba4009b4984,
         type: 3}

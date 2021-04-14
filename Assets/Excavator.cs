@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
 public class Excavator : MonoBehaviour
@@ -50,6 +53,12 @@ public class Excavator : MonoBehaviour
 
     void Start()
     {
+
+        if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
+        {
+           LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
+        }
+
         drillAnim = DrillCursor.GetComponentInChildren<Animator>();
         Cursor.visible = false; //custom cursors are setup
         audioSource = GetComponent<AudioSource>();
@@ -136,6 +145,32 @@ public class Excavator : MonoBehaviour
     {
         audioSource.Stop();
         currSoundClip = "";
+    }
+
+    public bool LoadLevel(int level)
+    {
+        foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
+        {
+            DestroyImmediate(fossil.gameObject);
+        }
+
+
+        if (File.Exists(Application.persistentDataPath + "/" + level + ".nonsense"))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/" + level + ".nonsense", FileMode.Open);
+            LevelLoader.LevelSetupSaveFile save = (LevelLoader.LevelSetupSaveFile)formatter.Deserialize(file);
+            file.Close();
+
+            foreach (TreasureBook.Fossil fossil in save.fossils)
+            {
+                GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
+                loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
+            }
+
+            return true;
+        }
+        return false;
     }
 
 }

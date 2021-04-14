@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  classification: 0
+  classification: 1
   progress: 0
   completionThreshold: 1.1
   removeable: 0

@@ -28,7 +28,7 @@ public class PlayerInfo : MonoBehaviour
             Destroy(this.gameObject);
         } else
         {
-            DontDestroyOnLoad(this.gameObject);
+           // DontDestroyOnLoad(this.gameObject);
         }
 
         if (LoadGame())

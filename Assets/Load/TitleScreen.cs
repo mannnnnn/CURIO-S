@@ -66,6 +66,6 @@ public class TitleScreen : MonoBehaviour
 
     public void GoToArcadeScreen()
     {
-        SceneManager.LoadScene("ArcadeScreen");
+        SceneManager.LoadScene("Arcade");
     }
 }
