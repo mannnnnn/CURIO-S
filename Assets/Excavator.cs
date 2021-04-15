@@ -56,7 +56,7 @@ public class Excavator : MonoBehaviour
 
         if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
         {
-           LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
+          // LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
         }
 
         drillAnim = DrillCursor.GetComponentInChildren<Animator>();
