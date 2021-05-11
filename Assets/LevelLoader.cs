@@ -9,10 +9,11 @@ using UnityEditor;
 public class LevelLoader : Editor
 {
     int level = 0;
+    private string fileLocation;
 
     public override void OnInspectorGUI()
     {
-       
+        fileLocation = Application.dataPath + "/Resources/";
         level = EditorGUILayout.IntField("Level", level);
 
         if (GUILayout.Button("Save Level"))
@@ -49,7 +50,7 @@ public class LevelLoader : Editor
         }
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/" + level + ".nonsense");
+        FileStream file = File.Create(fileLocation + level + ".nonsense");
         formatter.Serialize(file, save);
         file.Close();
     }
@@ -62,10 +63,10 @@ public class LevelLoader : Editor
         }
 
 
-        if (File.Exists(Application.persistentDataPath + "/" + level + ".nonsense"))
+        if (File.Exists(fileLocation + level + ".nonsense"))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/" + level + ".nonsense", FileMode.Open);
+            FileStream file = File.Open(fileLocation + level + ".nonsense", FileMode.Open);
             LevelSetupSaveFile save = (LevelSetupSaveFile)formatter.Deserialize(file);
             file.Close();
 

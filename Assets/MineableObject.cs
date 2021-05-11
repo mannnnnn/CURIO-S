@@ -84,13 +84,21 @@ public class MineableObject : MonoBehaviour
 
     public void UpdateDebugLabels()
     {
+        float progressFillPercent = progress / completionThreshold ;
+        float failureFillPercent = ((1 - quality));
         chimera.currNameLabel.text = gameObject.name;
-        chimera.currProgressLabel.text = broken ? "BROKEN" : "Progress: " + (progress/completionThreshold*100).ToString("#.##") + "%";
-        chimera.currQualityLabel.text = "Quality: " + (quality*100).ToString("#.##") + "%";
-        chimera.currNameLabel.color = broken ? Color.red : Color.white;
-        chimera.currProgressLabel.color = broken ? Color.red : Color.white;
-        chimera.currQualityLabel.color = broken ? Color.red : Color.white;
+        chimera.currProgressLabel.text = broken ? "X" : (progressFillPercent * 100).ToString("#.##") + "%";
+        chimera.currQualityLabel.text = (failureFillPercent * 100).ToString("#.##") + "%";
+
+        chimera.progressFill.fillAmount = progressFillPercent;
+        chimera.damageFill.fillAmount = failureFillPercent;
+
+        chimera.currNameLabel.color = broken ? brokenText : Color.white;
+        chimera.currProgressLabel.color = broken ? brokenText : Color.white;
+        chimera.currQualityLabel.color = broken ? brokenText : Color.white;
     }
+
+    Color brokenText = new Color(1, 0.9f, 0.8f, 1f);
 
     void FixedUpdate()
     {

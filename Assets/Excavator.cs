@@ -14,10 +14,13 @@ public class Excavator : MonoBehaviour
     public ControlMode controlMode = ControlMode.HAND;
     public GameObject scanner;
 
-    [Header("DebugLabels")]
+
     public Text currNameLabel;
     public Text currProgressLabel;
     public Text currQualityLabel;
+    public Image progressFill;
+    public Image damageFill;
+
     private MineableObject currentObject;
 
     public Color minedColor = Color.red;
