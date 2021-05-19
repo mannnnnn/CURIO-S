@@ -9,6 +9,14 @@ public class TreasureBook : ScriptableObject
     public List<Fossil> fossils = new List<Fossil>();
     public List<GameObject> fossilPrefabs = new List<GameObject>();
 
+    public Fossil GetFossilInfo(FossilType type){
+           foreach(Fossil fossil in fossils)
+        {
+            if (fossil.type == type) return fossil;
+        }
+        return null;
+    }
+
     [System.Serializable]
     public class MinedFossil
     {
@@ -30,6 +38,7 @@ public class TreasureBook : ScriptableObject
         public FossilType type = FossilType.STEGALOMANIAC;
         public string name = "";
         public string desc = "Doo do daat dat-";
+        public string flavor = "oh god";
         public MineableObject.Classification classification = MineableObject.Classification.TREASURE;
         public int prefabIndex = -1;
         public float[] xy;

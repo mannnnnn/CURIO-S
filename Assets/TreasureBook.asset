@@ -16,12 +16,14 @@ MonoBehaviour:
   - type: 0
     name: It's something
     desc: proabbly nothing good
+    flavor: oh god
     classification: 1
     prefabIndex: 0
     xy: []
   - type: 1
     name: Stegalomaniac
     desc: Duh da da da
+    flavor: oh god
     classification: 1
     prefabIndex: 1
     xy: []
@@ -29,36 +31,196 @@ MonoBehaviour:
     name: Datriraptor
     desc: A bird of prey, or perhaps a lizard. You aren't a biologist. All you know
       is you probably don't want to meet one out in the wild.
+    flavor: oh god
     classification: 1
     prefabIndex: 2
     xy: []
   - type: 3
     name: Mesodipus
     desc: Big bird bad bird
+    flavor: oh god
     classification: 1
     prefabIndex: 3
     xy: []
   - type: 4
     name: Orneroptyrix
     desc: Scary bat
+    flavor: oh god
     classification: 1
     prefabIndex: 4
     xy: []
   - type: 5
     name: Phelopthesaurus
     desc: Who named this
+    flavor: oh god
     classification: 1
     prefabIndex: 5
     xy: []
   - type: 6
     name: Teragnathus
     desc: Tooth
+    flavor: oh god
     classification: 1
     prefabIndex: 6
     xy: []
   - type: 7
     name: Vilactasaurus
     desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 8
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 9
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 10
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 11
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 12
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 13
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 14
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 15
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 16
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 17
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 18
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 19
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 20
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 21
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 22
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 23
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 24
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 25
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 26
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 27
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 28
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
+    classification: 1
+    prefabIndex: 7
+    xy: []
+  - type: 29
+    name: Vilactasaurus
+    desc: The best boy
+    flavor: oh god
     classification: 1
     prefabIndex: 7
     xy: []

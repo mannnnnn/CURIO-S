@@ -67,7 +67,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FadeIn
+    m_ConditionEvent: Show
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6882862753855487048}
@@ -92,13 +92,13 @@ AnimatorController:
   m_Name: Backdrop
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: FadeIn
+  - m_Name: Show
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: FadeOut
+  - m_Name: Hide
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -175,7 +175,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FadeOut
+    m_ConditionEvent: Hide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7846132266815716697}
