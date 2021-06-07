@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+
 
 [CustomEditor(typeof(Excavator))]
 public class LevelLoader : Editor
@@ -13,7 +15,7 @@ public class LevelLoader : Editor
 
     public override void OnInspectorGUI()
     {
-        fileLocation = Application.dataPath + "/Resources/";
+         string fileLocation = Path.Combine(Application.persistentDataPath, level + ".json");
         level = EditorGUILayout.IntField("Level", level);
 
         if (GUILayout.Button("Save Level"))
@@ -32,15 +34,9 @@ public class LevelLoader : Editor
 
     }
 
-    [System.Serializable]
-    public class LevelSetupSaveFile
-    {
-        public List<TreasureBook.Fossil> fossils = new List<TreasureBook.Fossil>();
-    }
-
     public void SaveLevel(int saveSlot){
         LevelSetupSaveFile save = new LevelSetupSaveFile();
-
+         string fileLocation = Path.Combine(Application.persistentDataPath, level + ".json");
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             TreasureBook.Fossil savingFossil = new TreasureBook.Fossil();
@@ -48,6 +44,9 @@ public class LevelLoader : Editor
             savingFossil.xy = new float[2] { fossil.gameObject.transform.position.x, fossil.gameObject.transform.position.y };
             save.fossils.Add(savingFossil);
         }
+
+        string jsonData = JsonUtility.ToJson( save , true );
+        File.WriteAllText( fileLocation + level + ".json" , jsonData );
 
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream file = File.Create(fileLocation + level + ".nonsense");
@@ -57,19 +56,15 @@ public class LevelLoader : Editor
 
     public bool LoadLevel(int level)
     {
+         string fileLocation = Path.Combine(Application.persistentDataPath, level + ".json");
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             DestroyImmediate(fossil.gameObject);
         }
 
-
-        if (File.Exists(fileLocation + level + ".nonsense"))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(fileLocation + level + ".nonsense", FileMode.Open);
-            LevelSetupSaveFile save = (LevelSetupSaveFile)formatter.Deserialize(file);
-            file.Close();
-
+        if (File.Exists(fileLocation + level + ".json")){
+            LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>( File.ReadAllText(fileLocation + level + ".json") );
+            
             foreach (TreasureBook.Fossil fossil in save.fossils)
             {
                 GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
@@ -80,4 +75,11 @@ public class LevelLoader : Editor
         }
         return false;
     }
+}
+#endif
+
+[System.Serializable]
+public class LevelSetupSaveFile
+{
+    public List<TreasureBook.Fossil> fossils = new List<TreasureBook.Fossil>();
 }

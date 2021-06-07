@@ -59,7 +59,7 @@ public class Excavator : MonoBehaviour
 
         if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
         {
-          // LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
+           LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
         }
 
         drillAnim = DrillCursor.GetComponentInChildren<Animator>();
@@ -158,22 +158,17 @@ public class Excavator : MonoBehaviour
         }
 
 
-        if (File.Exists(Application.persistentDataPath + "/" + level + ".nonsense"))
+        TextAsset file = Resources.Load("2") as TextAsset;
+        string testRead = file.ToString();
+        LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>(testRead);
+
+        foreach (TreasureBook.Fossil fossil in save.fossils)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/" + level + ".nonsense", FileMode.Open);
-            LevelLoader.LevelSetupSaveFile save = (LevelLoader.LevelSetupSaveFile)formatter.Deserialize(file);
-            file.Close();
-
-            foreach (TreasureBook.Fossil fossil in save.fossils)
-            {
-                GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
-                loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
-            }
-
-            return true;
+            GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
+            loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
         }
-        return false;
+
+        return true;
     }
 
 }
