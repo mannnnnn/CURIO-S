@@ -28,9 +28,11 @@ public class MineableObject : MonoBehaviour
     private bool interacting = false;
     private Excavator.ControlMode cursorTool = Excavator.ControlMode.HAND;
     private Excavator chimera;
+    private Animator animator;
     void Start()
     {
         chimera = Excavator.GetInstance();
+        animator = GetComponent<Animator>();
     }
 
     public void Remove()
@@ -84,20 +86,22 @@ public class MineableObject : MonoBehaviour
 
     public void UpdateDebugLabels()
     {
+
         float progressFillPercent = progress / completionThreshold ;
         float failureFillPercent = ((1 - quality));
 
-        chimera.currNameLabel.transform.parent.gameObject.SetActive(true);
-
-        chimera.currNameLabel.text = gameObject.name;
-        chimera.currProgressLabel.text = broken ? "" : (progressFillPercent * 100).ToString("#.##") + "%";
-        chimera.currQualityLabel.text = (failureFillPercent * 100).ToString("#.##") + "%";
+        if(completionThreshold > 0)
+        {
+            chimera.currProgressLabel.text = broken ? "" : (Mathf.Clamp(progressFillPercent, 0, 1) * 100).ToString("#.##") + "%";
+        } else
+        {
+            chimera.currProgressLabel.text = "0%";
+        }
+        chimera.currQualityLabel.text = (Mathf.Clamp(failureFillPercent,0,1) * 100).ToString("#.##") + "%";
         chimera.progressFill.fillAmount = progressFillPercent;
         chimera.damageFill.fillAmount = failureFillPercent;
-        chimera.currNameLabel.color = broken ? brokenText : Color.white;
         chimera.currProgressLabel.color = broken ? brokenText : Color.white;
         chimera.currQualityLabel.color = broken ? brokenText : Color.white;
-
 
         if (broken)
         {
@@ -125,6 +129,8 @@ public class MineableObject : MonoBehaviour
                 {
                     broken = true;
                     quality = failureThreshold;
+                    transform.position = new Vector3(transform.position.x, transform.position.y, -20);
+                    animator.SetTrigger("Break");
                 }
                 if (!removeable)
                 {
