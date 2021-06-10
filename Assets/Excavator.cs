@@ -158,7 +158,7 @@ public class Excavator : MonoBehaviour
         }
 
 
-        TextAsset file = Resources.Load("2") as TextAsset;
+        TextAsset file = Resources.Load(level.ToString()) as TextAsset;
         string testRead = file.ToString();
         LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>(testRead);
 
@@ -166,6 +166,8 @@ public class Excavator : MonoBehaviour
         {
             GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
             loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
+            loadedFossil.transform.localScale = new Vector3(fossil.scale[0], fossil.scale[1], fossil.scale[2]);
+            loadedFossil.transform.eulerAngles = new Vector3(fossil.rotation[0], fossil.rotation[1], fossil.rotation[2]);
         }
 
         return true;

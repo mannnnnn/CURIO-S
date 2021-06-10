@@ -42,6 +42,8 @@ public class TreasureBook : ScriptableObject
         public MineableObject.Classification classification = MineableObject.Classification.TREASURE;
         public int prefabIndex = -1;
         public float[] xy;
+        public float[] scale;
+        public float[] rotation;
     }
 
     [System.Serializable]

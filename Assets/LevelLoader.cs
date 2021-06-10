@@ -36,44 +36,41 @@ public class LevelLoader : Editor
 
     public void SaveLevel(int saveSlot){
         LevelSetupSaveFile save = new LevelSetupSaveFile();
-         string fileLocation = Path.Combine(Application.persistentDataPath, level + ".json");
+         string fileLocation = Application.dataPath + "/Resources/";
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             TreasureBook.Fossil savingFossil = new TreasureBook.Fossil();
             savingFossil.prefabIndex = (int)fossil.type;
             savingFossil.xy = new float[2] { fossil.gameObject.transform.position.x, fossil.gameObject.transform.position.y };
+            savingFossil.scale = new float[3] { fossil.gameObject.transform.localScale.x, fossil.gameObject.transform.localScale.y, fossil.gameObject.transform.localScale.z };
+            savingFossil.rotation = new float[3] { fossil.gameObject.transform.eulerAngles.x, fossil.gameObject.transform.eulerAngles.y, fossil.gameObject.transform.eulerAngles.z };
             save.fossils.Add(savingFossil);
         }
-
         string jsonData = JsonUtility.ToJson( save , true );
         File.WriteAllText( fileLocation + level + ".json" , jsonData );
-
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(fileLocation + level + ".nonsense");
-        formatter.Serialize(file, save);
-        file.Close();
     }
 
     public bool LoadLevel(int level)
     {
-         string fileLocation = Path.Combine(Application.persistentDataPath, level + ".json");
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             DestroyImmediate(fossil.gameObject);
         }
 
-        if (File.Exists(fileLocation + level + ".json")){
-            LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>( File.ReadAllText(fileLocation + level + ".json") );
-            
-            foreach (TreasureBook.Fossil fossil in save.fossils)
-            {
-                GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
-                loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
-            }
-           
-            return true;
+
+        TextAsset file = Resources.Load(level.ToString()) as TextAsset;
+        string testRead = file.ToString();
+        LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>(testRead);
+
+        foreach (TreasureBook.Fossil fossil in save.fossils)
+        {
+            GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
+            loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
+            loadedFossil.transform.localScale = new Vector3(fossil.scale[0], fossil.scale[1], fossil.scale[2]);
+            loadedFossil.transform.eulerAngles = new Vector3(fossil.rotation[0], fossil.rotation[1], fossil.rotation[2]);
         }
-        return false;
+
+        return true;
     }
 }
 #endif
