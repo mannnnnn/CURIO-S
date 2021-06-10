@@ -6,10 +6,10 @@
             "desc": "Doo do daat dat-",
             "flavor": "oh god",
             "classification": 1,
-            "prefabIndex": 11,
+            "prefabIndex": 21,
             "xy": [
-                -6.070000171661377,
-                2.3399999141693117
+                -5.730000019073486,
+                -0.6399999856948853
             ],
             "scale": [
                 4.0,
@@ -19,7 +19,7 @@
             "rotation": [
                 0.0,
                 0.0,
-                0.0
+                330.0677185058594
             ]
         },
         {
@@ -28,10 +28,10 @@
             "desc": "Doo do daat dat-",
             "flavor": "oh god",
             "classification": 1,
-            "prefabIndex": 7,
+            "prefabIndex": 5,
             "xy": [
-                1.6299999952316285,
-                0.6800000071525574
+                2.3509271144866945,
+                0.7759338617324829
             ],
             "scale": [
                 1.0,
