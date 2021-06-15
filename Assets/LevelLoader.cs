@@ -10,6 +10,12 @@ using UnityEditor;
 [CustomEditor(typeof(Excavator))]
 public class LevelLoader : Editor
 {
+    float refWidth = 2160  ;
+    float refHeight = 1080;
+    float widthScalar = 1;
+    float heightScalar = 1;
+
+    public Transform WorldParent;
     int level = 0;
     private string fileLocation;
 
@@ -52,6 +58,11 @@ public class LevelLoader : Editor
 
     public bool LoadLevel(int level)
     {
+        Vector3 screenDim = Camera.main.ViewportToScreenPoint(Vector3.one);
+        float scale = Mathf.Min(refWidth / screenDim.x, refHeight / screenDim.y);
+
+
+        
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             DestroyImmediate(fossil.gameObject);
@@ -65,8 +76,8 @@ public class LevelLoader : Editor
         foreach (TreasureBook.Fossil fossil in save.fossils)
         {
             GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
-            loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
-            loadedFossil.transform.localScale = new Vector3(fossil.scale[0], fossil.scale[1], fossil.scale[2]);
+            loadedFossil.transform.localPosition = new Vector3(fossil.xy[0]*scale, fossil.xy[1] * scale, -1);
+            loadedFossil.transform.localScale = new Vector3(fossil.scale[0] * scale, fossil.scale[1] * scale, fossil.scale[2] * scale);
             loadedFossil.transform.eulerAngles = new Vector3(fossil.rotation[0], fossil.rotation[1], fossil.rotation[2]);
         }
 
