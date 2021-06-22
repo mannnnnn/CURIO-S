@@ -23,7 +23,7 @@ public class MineableObject : MonoBehaviour
     public bool removeable = false;
     public bool broken = false;
     private float fragility = 0.01f; // how quickly an object breaks
-
+    public SpriteRenderer animatedFossil;
     //interaction logic
     private bool interacting = false;
     private Excavator.ControlMode cursorTool = Excavator.ControlMode.HAND;
@@ -33,6 +33,7 @@ public class MineableObject : MonoBehaviour
     {
         chimera = Excavator.GetInstance();
         animator = GetComponent<Animator>();
+        animatedFossil.sprite = transform.GetChild(0).GetComponent<SpriteRenderer>().sprite; 
     }
 
     public void Remove()
@@ -129,7 +130,6 @@ public class MineableObject : MonoBehaviour
                 {
                     broken = true;
                     quality = failureThreshold;
-                    transform.position = new Vector3(transform.position.x, transform.position.y, -20);
                     animator.SetTrigger("Break");
                 }
                 if (!removeable)

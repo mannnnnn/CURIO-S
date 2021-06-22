@@ -77,7 +77,7 @@ public class LevelLoader : Editor
         {
             GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
             loadedFossil.transform.localPosition = new Vector3(fossil.xy[0]*scale, fossil.xy[1] * scale, -1);
-            loadedFossil.transform.localScale = new Vector3(fossil.scale[0] * scale, fossil.scale[1] * scale, fossil.scale[2] * scale);
+            loadedFossil.transform.localScale = new Vector3(fossil.scale[0] * scale, fossil.scale[1] * scale, 1);
             loadedFossil.transform.eulerAngles = new Vector3(fossil.rotation[0], fossil.rotation[1], fossil.rotation[2]);
         }
 
