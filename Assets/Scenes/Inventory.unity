@@ -1245,8 +1245,11 @@ MonoBehaviour:
   title: {fileID: 2138872137}
   desc: {fileID: 1123483690}
   flavorText: {fileID: 1719147076}
+  quantity: {fileID: 580706399}
   previewImage: {fileID: 1612714652}
   flavorPanel: {fileID: 347506914}
+  flavorBtn: {fileID: 1510783724}
+  selectedFossil: 0
 --- !u!4 &1075722755
 Transform:
   m_ObjectHideFlags: 0
@@ -1592,7 +1595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -703.9, y: -14.549988}
+  m_AnchoredPosition: {x: -703.90015, y: -14.549927}
   m_SizeDelta: {x: 1230.8301, y: -161.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252487109
@@ -2634,7 +2637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.650024, y: -6.200012}
+  m_AnchoredPosition: {x: -12.6501465, y: -6.2000732}
   m_SizeDelta: {x: -100.95996, y: -145.03003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111527102

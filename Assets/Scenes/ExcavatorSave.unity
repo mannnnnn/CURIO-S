@@ -1612,7 +1612,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &392849460
 MonoBehaviour:
@@ -2906,7 +2906,7 @@ Transform:
   - {fileID: 240744464}
   - {fileID: 951808021}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724206669
 GameObject:
@@ -3534,7 +3534,7 @@ Transform:
   m_LocalScale: {x: 0.09486474, y: 0.13288637, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &902842234
 GameObject:
@@ -9657,7 +9657,7 @@ Transform:
   - {fileID: 1237832539}
   - {fileID: 1761340425}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1284745456
 GameObject:
@@ -9817,7 +9817,7 @@ Transform:
   m_LocalScale: {x: 154.34932, y: 89.22294, z: 0.18979247}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379273563
 GameObject:
@@ -10220,7 +10220,7 @@ Transform:
   - {fileID: 2083226366}
   - {fileID: 1901997522}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493916734
 GameObject:
@@ -10486,52 +10486,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557452169}
   m_CullTransparentMesh: 1
---- !u!1 &1609474015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1609474018}
-  - component: {fileID: 1609474017}
-  m_Layer: 0
-  m_Name: ImmortalChimera
-  m_TagString: GameController
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1609474017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609474015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2277c09d27c581488e29010aaaf3cd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectedFossils: []
-  currentStage: 0
-  fossilBook: {fileID: 11400000, guid: a93885b78d614c141a7205a499ba5203, type: 2}
---- !u!4 &1609474018
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609474015}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 98.10254}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652081784
 GameObject:
   m_ObjectHideFlags: 0
@@ -16303,7 +16257,7 @@ Transform:
   m_Children:
   - {fileID: 132264621}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2114042688
 MonoBehaviour:

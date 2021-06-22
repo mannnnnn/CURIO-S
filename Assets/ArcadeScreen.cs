@@ -10,4 +10,9 @@ public class ArcadeScreen : MonoBehaviour
         PlayerPrefs.SetInt("ArcadeLevel", level);
         SceneManager.LoadScene("ExcavatorSave");
     }
+
+    public void GoToInventoryScreen()
+    {
+        SceneManager.LoadScene("Inventory");
+    }
 }
