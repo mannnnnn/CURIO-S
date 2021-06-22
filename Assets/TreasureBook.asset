@@ -221,9 +221,9 @@ MonoBehaviour:
     scale: []
     rotation: []
   - type: 15
-    name: A crystal that vibrates wildly when touched by human hand. Its green coloring
+    name: Tiger Point
+    desc: A crystal that vibrates wildly when touched by human hand. Its green coloring
       is highly prized , but it makes for poor jewelry.
-    desc: The best boy
     flavor: Breaks apart like sand in your mouth, but the granuals pop within your
       mouth. Sour and cinnamon flavors pop alongside the stone.
     classification: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
     scale: []
     rotation: []
   - type: 26
-    name: 
+    name: Paleshell
     desc: A collections of shells which have been bound together by an electric current.
       It seems to have a life of its own.
     flavor: Mushroom taste with a strong clam flavor as well. It has a very crunch
@@ -417,3 +417,34 @@ MonoBehaviour:
   - {fileID: 1729474669073264924, guid: 82e46185862f9734a85cc84572073b81, type: 3}
   - {fileID: 1492879874339130542, guid: 47effcae9d544a2409b3855e1b742991, type: 3}
   - {fileID: 3150998640419321051, guid: ee492d722b654c24cbce1d024cfa6fdd, type: 3}
+  fossilImages:
+  - {fileID: 21300000, guid: 140f86b1f9fb28441adb0a7fd72f22e2, type: 3}
+  - {fileID: 21300000, guid: a94fb8bef7985eb4299c78214bfb9937, type: 3}
+  - {fileID: 21300000, guid: 0e1e95c6f1ba47c4789cd9b7c067b21b, type: 3}
+  - {fileID: 21300000, guid: 86a82e54732431c4f8a2c109875829aa, type: 3}
+  - {fileID: 21300000, guid: d29837baf6253694cbabab90dcd03246, type: 3}
+  - {fileID: 21300000, guid: e699070859a7c934cb37f5a492033104, type: 3}
+  - {fileID: 21300000, guid: 140f86b1f9fb28441adb0a7fd72f22e2, type: 3}
+  - {fileID: 21300000, guid: dffc10253df40be47b3c04c97988b94f, type: 3}
+  - {fileID: 6238536508793740559, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -9201733649700018261, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -1568638221372242848, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 8398862855918999338, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 389527547581473057, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7995746212600263114, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 5377930256395652000, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -6327906204971294205, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 2103465297598726036, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -3863293722784348063, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 6520690533007125509, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -2048984213834616944, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 6054366861262026957, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 2402599201175358526, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7403895376955524585, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -6158814222814340780, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 7296930178504924918, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -5568589276524277431, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7118478639918249906, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -2818289773082199708, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 8087791072826656636, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 4809137521293944628, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}

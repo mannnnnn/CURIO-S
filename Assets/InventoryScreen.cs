@@ -12,6 +12,7 @@ public class InventoryScreen : MonoBehaviour
     public Text title;
     public Text desc;
     public Text flavorText;
+    public Image previewImage;
     public GameObject flavorPanel;
     
     void Start()
@@ -19,7 +20,11 @@ public class InventoryScreen : MonoBehaviour
         bool startingBtn = true;
         foreach(TreasureBook.FossilType fossil in TreasureBook.FossilType.GetValues(typeof(TreasureBook.FossilType)))
         {
-            if(startingBtn)
+            if (fossil == TreasureBook.FossilType.DEFAULT)
+            {
+                //nothing
+            }
+             else if(startingBtn)
             {
                 leftPanelObject.GetComponentInChildren<Text>().text = treasureBook.GetFossilInfo(fossil).name;
                 leftPanelObject.GetComponent<Button>().onClick.AddListener(() => LeftButtonClicked((int)fossil));
@@ -30,8 +35,9 @@ public class InventoryScreen : MonoBehaviour
                 newBtn.GetComponentInChildren<Text>().text = treasureBook.GetFossilInfo(fossil).name;
                 newBtn.GetComponent<Button>().onClick.AddListener(() => LeftButtonClicked((int)fossil));
             }
-
+           
         }
+        LeftButtonClicked(1);
     }
 
     void LeftButtonClicked(int fossilNum)
@@ -39,6 +45,7 @@ public class InventoryScreen : MonoBehaviour
         title.text = treasureBook.GetFossilInfo((TreasureBook.FossilType)fossilNum).name;
         desc.text = treasureBook.GetFossilInfo((TreasureBook.FossilType)fossilNum).desc;
         flavorText.text = treasureBook.GetFossilInfo((TreasureBook.FossilType)fossilNum).flavor;
+        previewImage.sprite = treasureBook.GetFossilSprite((TreasureBook.FossilType)fossilNum);
     }
 
     public void EatAFossil()

@@ -8,13 +8,18 @@ public class TreasureBook : ScriptableObject
 
     public List<Fossil> fossils = new List<Fossil>();
     public List<GameObject> fossilPrefabs = new List<GameObject>();
-
+    public List<Sprite> fossilImages = new List<Sprite>();
     public Fossil GetFossilInfo(FossilType type){
            foreach(Fossil fossil in fossils)
         {
             if (fossil.type == type) return fossil;
         }
         return null;
+    }
+
+    public Sprite GetFossilSprite(FossilType type)
+    {
+        return fossilImages[(int)type];
     }
 
     [System.Serializable]
