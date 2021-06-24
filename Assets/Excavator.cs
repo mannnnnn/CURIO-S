@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Excavator : MonoBehaviour
 {
@@ -51,10 +52,17 @@ public class Excavator : MonoBehaviour
     {
        return GameObject.Find("ChimeraController").GetComponent<Excavator>();
     }
+    public void BackButtonPressed()
+    {
+        SceneManager.LoadScene("Arcade");
+    }
 
     void Start()
     {
-
+        currProgressLabel.text = "0%";
+        currQualityLabel.text = "0%";
+        progressFill.fillAmount = 0;
+        damageFill.fillAmount = 0;
         if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
         {
            LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));

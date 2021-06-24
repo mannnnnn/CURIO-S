@@ -40,10 +40,18 @@ public class MineableObject : MonoBehaviour
 
     public void Remove()
     {
-        TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
-        PlayerInfo.GetInstance().CollectFossil(fossil);
-        //TODO: play remove animation
-        //TODO: play some sfx
+        if(quality > failureThreshold)
+        {
+            TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
+            PlayerInfo.GetInstance().CollectFossil(fossil);
+        }
+       
+        chimera.currProgressLabel.text = "0%";
+        chimera.currQualityLabel.text = "0%";
+
+        chimera.progressFill.fillAmount = 0;
+        chimera.damageFill.fillAmount = 0;
+
         Destroy(this.gameObject);
     }
 
@@ -93,14 +101,25 @@ public class MineableObject : MonoBehaviour
         float progressFillPercent = progress / completionThreshold ;
         float failureFillPercent = ((1 - quality));
 
-        if(completionThreshold > 0)
+        if(completionThreshold > 0 && !float.IsNaN(progressFillPercent) && progressFillPercent >= 0)
         {
-            chimera.currProgressLabel.text = broken ? "" : (Mathf.Clamp(progressFillPercent, 0, 1) * 100).ToString("#.##") + "%";
+            chimera.currProgressLabel.text = broken ? "0%" : (Mathf.Clamp(progressFillPercent, 0, 1) * 100).ToString("#.##") + "%";
         } else
         {
             chimera.currProgressLabel.text = "0%";
+            chimera.progressFill.fillAmount = 0;
         }
-        chimera.currQualityLabel.text = (Mathf.Clamp(failureFillPercent,0,1) * 100).ToString("#.##") + "%";
+
+        if (!float.IsNaN(failureFillPercent) && failureFillPercent > 0)
+        {
+            chimera.currQualityLabel.text = (Mathf.Clamp(failureFillPercent, 0, 1) * 100).ToString("#.##") + "%";
+        }
+        else
+        {
+            chimera.currQualityLabel.text = "0%";
+            chimera.damageFill.fillAmount = 0;
+        }
+      
         chimera.progressFill.fillAmount = progressFillPercent;
         chimera.damageFill.fillAmount = failureFillPercent;
         chimera.currProgressLabel.color = broken ? brokenText : Color.white;

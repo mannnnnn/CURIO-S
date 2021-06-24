@@ -292,9 +292,10 @@ MonoBehaviour:
     rotation: []
   - type: 21
     name: Carnelian Mirror
-    desc: Flexible and malleable, with a starchy taste to it. When you bite down
+    desc: A shiny piece of stone, naturally polished by wind and rain. It is inadvisable
+      to look within its depths, for it reflects things that may or may not exist.
+    flavor: Flexible and malleable, with a starchy taste to it. When you bite down
       on it, it snaps sharply into a flavor that tastes spicy and salty.
-    flavor: oh god
     classification: 1
     prefabIndex: 7
     xy: []

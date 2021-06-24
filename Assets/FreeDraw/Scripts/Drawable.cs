@@ -102,7 +102,7 @@ namespace FreeDraw
             Vector2 pixel_pos = WorldToPixelCoordinates(world_position);
             cur_colors = drawable_texture.GetPixels32();
 
-            Color BleedColor = new Color (0,0,0,0.5f);
+            Color BleedColor = Pen_Colour;
             int offset = Pen_Width;
             // If you do care about dragging, use the below if/else structure
             Vector2 adjustedPixelPos = new Vector2(pixel_pos.x, pixel_pos.y+offset);
