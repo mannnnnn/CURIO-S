@@ -1,0 +1,114 @@
+{
+    "fossils": [
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 20,
+            "xy": [
+                3.5905001163482668,
+                0.9983000159263611
+            ],
+            "scale": [
+                2.9811999797821047,
+                3.196000099182129,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 15,
+            "xy": [
+                -6.929999828338623,
+                2.6700000762939455
+            ],
+            "scale": [
+                2.9072000980377199,
+                2.885999917984009,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                319.7716064453125
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 19,
+            "xy": [
+                -4.521005153656006,
+                0.5375237464904785
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 26,
+            "xy": [
+                3.1043999195098879,
+                -1.9437999725341797
+            ],
+            "scale": [
+                2.5759999752044679,
+                2.6744000911712648,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 9,
+            "xy": [
+                -1.535407304763794,
+                1.7075557708740235
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ]
+}

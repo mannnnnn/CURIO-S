@@ -20,216 +20,432 @@ MonoBehaviour:
     classification: 1
     prefabIndex: 0
     xy: []
+    scale: []
+    rotation: []
   - type: 1
     name: Stegalomaniac
-    desc: Duh da da da
-    flavor: oh god
+    desc: 'A multi-eyed beast with a broad feathered tail, easy to swing and bat
+      aside potential predators. The Stegalomaniac is known for its fantastical coloring,
+      its mirror-like eyes, and its incredible aggressive nature. It assaults the
+      senses by charging from beneath the brush and revealing a swirling mix of color
+      and shapes, stunning those who it catches off-guard. Despite being a herbivore,
+      it will chase down predators for sport. '
+    flavor: 'The skull of the Stegalomaniac is brittle and nearly flavorless, more
+      like eating a warm ice than anything else. The flavor seems to change ever
+      so slightly though, every time you take a bite, but never strays from bland. '
     classification: 1
     prefabIndex: 1
     xy: []
+    scale: []
+    rotation: []
   - type: 2
     name: Datriraptor
-    desc: A bird of prey, or perhaps a lizard. You aren't a biologist. All you know
-      is you probably don't want to meet one out in the wild.
-    flavor: oh god
+    desc: 'A fast-moving, thin creature with brilliant red stripes along its sides
+      that give off light. The Datriraptor has an avian appearance, but lacks features,
+      and rather has a perfectly smooth and almost vinyl-like skin. The Datriraptor''s
+      eyes and stripes appear dark when it is sneaking, but light up a neon red when
+      it is attempting to startle its prey (or when displaying emotion). '
+    flavor: 'The skull of the Datriraptor has a mossy taste too it, but is not unpleasant.
+      A bit like eating a grainy salad. It crumbles to the taste, and leaves the
+      aftertaste not dissimilar to goat cheese. '
     classification: 1
     prefabIndex: 2
     xy: []
+    scale: []
+    rotation: []
   - type: 3
     name: Mesodipus
-    desc: Big bird bad bird
-    flavor: oh god
+    desc: 'A small aquatic bird creature, known for its quick deliberate movements.
+      The Mesodipus is a reactionary creature, capable of adapting to more urban
+      environments without much struggle, and able to easily body its way into non-aquatic
+      biomes already occupied by other creatures. It has little defense other than
+      its quiet and unassuming nature, which it utelizes to disarm potential predators,
+      and scavenge from more capable company. '
+    flavor: 'The skull of the Mesodipus has the consistency of chocolate, but the
+      taste of brine and garbage. There''s small pockets of air throughout. '
     classification: 1
     prefabIndex: 3
     xy: []
+    scale: []
+    rotation: []
   - type: 4
     name: Orneroptyrix
-    desc: Scary bat
-    flavor: oh god
+    desc: 'The bane of caves everywhere, the Orneroptyrix resembles a small bat-like
+      creature with legs perfect for grappling away cameras, flashlights, and other
+      tools from the hands of unsuspecting spelunkers. Their features are built like
+      an owl''s, muting their flight and making them highly effective silent fliers.
+      They take bites out of anything made of meat, and steal anything that isn''t
+      to bring back to their nests. '
+    flavor: 'The bones of the Orneroptyrix are wispy and tastes a bit like biting
+      into a crunchy sort of wool. They taste a bit like orange zest mixed with chicken. '
     classification: 1
     prefabIndex: 4
     xy: []
+    scale: []
+    rotation: []
   - type: 5
     name: Phelopthesaurus
-    desc: Who named this
-    flavor: oh god
+    desc: 'A domed, armadillo-like creatures with dark blue skin and shell. The Phelopthesaurus
+      is surprisingly mobile, though slow. It can navigate up nearly vertical surfaces
+      with relative ease, thanks to its slender limbs and opposable thumbs. They
+      prefer to travel at night, when they are best camouflaged, but are so slow
+      that they are often still climbing by the time day comes around, making them
+      easy to spot. '
+    flavor: The skull of the Phelopthesaurus is cool to the touch, even when heated.
+      It tastes like the dead of winter, or a particularly cold night in autumn.
     classification: 1
     prefabIndex: 5
     xy: []
+    scale: []
+    rotation: []
   - type: 6
     name: Teragnathus
-    desc: Tooth
-    flavor: oh god
+    desc: 'A creature hewn from silver and muscle, sewn together into some sort of
+      hulking brute. The Teragnathus falls somewhere between the appearance of a
+      gorilla and a bear, with a blunt featureless face perfect for ramming into
+      predators, and a set of unbreakable claws to help it tear through debris. '
+    flavor: The skull of the Teragnathus tastes like a kind of lime candy, lacking
+      the sweetness. There's a grainy texture to it, and a sort of salty bubbly residue
+      that lingers in your mouth.
     classification: 1
     prefabIndex: 6
     xy: []
+    scale: []
+    rotation: []
   - type: 7
     name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    desc: 'The apex predator of the woods, the Vilactasaurus may not be gigantic,
+      but it preys upon creatures of all sizes. Its body can contort into many different
+      forms, though it always reverts to a reptilian state upon death. It is terrifyingly
+      relentless, unable to give up a chase once it starts running. The most common
+      death for a Vilactasaurus is running itself to death, whether that be collapsing
+      due to exhaustion or following its prey off a cliff. '
+    flavor: 'The skull of the Vilactasaurus tastes strongly of meat and anise, and
+      fills your mouth with a broth-like flavor. The taste lingers far longer than
+      it should have. '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 8
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Lagamorph
+    desc: 'The champion of the wildlands, the Lagamorph resembles a huge, white-eyed
+      rabbit with a dark pelt that clings close to its skin. The Lagamorph is a predatory
+      animal, laying in wait near its burrow and lunging out at anything that comes
+      close while it rests. Finding one out in the wild, though, it fortuitous, since
+      they never attack when spotted. Lagamorphs will join herds of deer or even
+      packs of sheep when not hunting, and lop alongside the group contentedly. '
+    flavor: 'The Lagamorph''s skull is hard as a rock, impossible to ingest without
+      grevious injury. It smells sweetly of raspberries though, and tastes a bit
+      like a salty rhubarb crisp. '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 9
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Spearhead
+    desc: 'The champion of the seas, the Spearhead is a deadly fish that resembles
+      a swordfish, only much bigger. Its nose is shorter than a swordfish''s in proportion
+      to its body, but below the nose rests a nasty set of teeth which inject a tranquilizer
+      into any creature too big to skewer. Spearheads are not good hunters, but they
+      are very good killers. '
+    flavor: 'The Spearhead''s skull is hard as a rock, but you can chip off bits
+      and pieces of the nose with a bit of time and patience. These flakes taste
+      earthy, and are as sharp as glass within your throat. '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 10
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Braunt
+    desc: 'The champion of the mountains, the Braunt is a long-furred dog creature
+      with two massive teeth which protrude from its mouth. Its coat is a dingy grey
+      color, and its eyes are jelly black spheres hidden beneath its furred brow.
+      The Braunt is incredibly tough to kill, even when caught, and shrugs off most
+      injuries without much bother. Its pain tolerance is so high, Braunts have been
+      known to obliviously leave limbs behind in traps, rather than break the trap
+      and escape in one piece. '
+    flavor: 'The Braunt''s skull is hard as a rock and impossible to ingest without
+      grevious injury, but smooth and silky. Its flavor is simply vanilla. '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 11
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Bubbled Amber
+    desc: A section of tree sap which has been airated. It has a sickly yellow coloring,
+      and reflects light throughout. If it's reheated, it can become a helpful but
+      permanent glue substance.
+    flavor: It tastes faintly of honey, with a strong green planty taste. The bubbles
+      in the amber crunch beneath your teeth.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 12
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Layered Steel
+    desc: A processed bit of metal with different types of steel fused together into
+      different layers. Runes are scrawled on the edges, enchanting the steel to
+      change hardness to the layer touched by human hand.
+    flavor: Its got a dry flavor with a firm but supple metallic composition. The
+      taste of dust lingers in your mouth.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 13
-    name: Vilactasaurus
-    desc: The best boy
+    name: Blue Amythest
+    desc: It has a sour and fruity taste with a lukewarm touch. It's easy to pop
+      in your mouth and allow to dissolve.
     flavor: oh god
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 14
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Druzy Metal
+    desc: A metal which has been exposed to advanced magics. The properties of the
+      metal have gone and done their own thing.
+    flavor: It lacks in flavor, like eating snow. It crunches beneath your tongue,
+      and only tastes slightly like the dirt from which it came.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 15
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Tiger Point
+    desc: A crystal that vibrates wildly when touched by human hand. Its green coloring
+      is highly prized , but it makes for poor jewelry.
+    flavor: Breaks apart like sand in your mouth, but the granuals pop within your
+      mouth. Sour and cinnamon flavors pop alongside the stone.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 16
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Red Amalgamation
+    desc: A gooey creation that somehow manages to stay mainly solid within your
+      grasp. It has a consistency not unlike congealed blood, but changes depending
+      on unknown circumstances.
+    flavor: A slimey, substance that tastes a bit like spiced meat. The drippings
+      taste like glazed pineapple.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 17
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Faerie Box Stone
+    desc: A stone you should not have picked up.
+    flavor: It has a strong minty flavor. The decals throughout the stone are where
+      the flavor is the strongest. Some people insist that it tastes like cinnamon,
+      rather than mint, it seems to differ by the person.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 18
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: False Pyrite
+    desc: More valuable than pyrite, and gold for that matter. False Pyrite, also
+      known as Fool's Joy, is highly valuable to very specific people.
+    flavor: It breaks apart into wafer-thin pieces. each of which tastes somewhere
+      between paper and a thinned cream. The taste of plantains bursts in your mouth
+      for a sweet moment, then fades.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 19
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Sickened Malachite
+    desc: A corrupted variant of malachite with a strong blue coloring, capable of
+      distilling nearly everything it touches. Hold it away from all living creatures,
+      lest it distill something out of you and into another.
+    flavor: 'Sweet to the point of bitterness, you want to spit it out from the way
+      it makes the face on your skin feel. It tastes distinctly of cake, '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 20
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Viking Compass
+    desc: Shiny and blinding, there's not a source of light that doesn't cause this
+      stone to light up immediately. Strangely enough, it keeps a bit of its glare
+      though even without a light source.
+    flavor: 'Tastes like the cold, like you''re consuming something sweet and frosty,
+      but it is the same temperature '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 21
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Carnelian Mirror
+    desc: A shiny piece of stone, naturally polished by wind and rain. It is inadvisable
+      to look within its depths, for it reflects things that may or may not exist.
+    flavor: Flexible and malleable, with a starchy taste to it. When you bite down
+      on it, it snaps sharply into a flavor that tastes spicy and salty.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 22
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Life Stone
+    desc: A lucky find, for anyone living anywhere. There is always one nearby, but
+      finding it is a different matter.
+    flavor: 'Its got a watery taste with hints of sweetness. The consistency is somewhere
+      between water and air, '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 23
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Berryblade
+    desc: A beautiful gemstone highly prized for jewelry. It grows naturally among
+      the bones of mythical creatures. It is always cursed as a result.
+    flavor: Tastes like biting down onto a thistle, and it resonates with your body.
+      It melts away in your mouth like a wine.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 24
-    name: Vilactasaurus
-    desc: The best boy
+    name: Bubbled Lardstone
+    desc: Tastes like pure fat, grease, or a bad cut of meat. The core tastes like
+      fried crumbs, soaked in the stone's juices.
     flavor: oh god
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 25
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Death Points
+    desc: You can touch one point, or the other, but never both within your lifetime.
+    flavor: You have to trim off the ends of the death points in order to safetly
+      ingest this stone. It tastes like a rhubarb version of fruit leather.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 26
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Paleshell
+    desc: A collections of shells which have been bound together by an electric current.
+      It seems to have a life of its own.
+    flavor: Mushroom taste with a strong clam flavor as well. It has a very crunch
+      and straightforward texture, and is slightly flaky on the interior bits.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 27
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Singular Topaz
+    desc: This form of topaz comes in only one color, and is always cut into a teardrop
+      shape. Fairly common, but always a sign of bad luck.
+    flavor: A slight almond taste, with strong nutty flavor. It leaves a bad aftertaste
+      in your mouth, like eating a bar of soap.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 28
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Gnawed Jasper
+    desc: A perfectly circular sphere that has been defiled by a bird's peak. Long,
+      boring holes run into it and expose a hollowed inside.
+    flavor: 'A combination of meaty and creamy tastes, if it were served on a set
+      of tree bark. '
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   - type: 29
-    name: Vilactasaurus
-    desc: The best boy
-    flavor: oh god
+    name: Corundum Cabachon
+    desc: A smooth, swirling stone with colors that shift and twirl beneath. It reflects
+      light dimly.
+    flavor: It tastes like a pomagrante, and it is soft and supple beneath the surface
+      like a gelatin. It has the consistency of a lentil.
     classification: 1
     prefabIndex: 7
     xy: []
+    scale: []
+    rotation: []
   fossilPrefabs:
-  - {fileID: 1832475428084072, guid: c1bee09c88207064ca42d6ebc274c572, type: 3}
-  - {fileID: 6419934281106518087, guid: 974d41bc5c6850448a670c6ab7043ec1, type: 3}
-  - {fileID: 8192108729735311704, guid: 689676994fa5ea346ba31ff44ae22e87, type: 3}
-  - {fileID: 8726245369723799974, guid: d6e934f6808e57e449651e1dfc15864b, type: 3}
-  - {fileID: 5052560457946520287, guid: 5dff61a8cf7fbca449d893f103708f49, type: 3}
-  - {fileID: 3742871617524098213, guid: 8eb0275f103e51d499da1dd1f4ba254d, type: 3}
-  - {fileID: 63070007226839029, guid: ae6eb1c89956a1549b0b22316664664e, type: 3}
-  - {fileID: 8114437571833275886, guid: 707acabfac7abd943a9c252bd73d0ce6, type: 3}
+  - {fileID: 5754080306284981720, guid: 9e53d888c0580414082055384ef9cce3, type: 3}
+  - {fileID: 6878870535184574942, guid: 04b11295b170cc846927067e016f4c55, type: 3}
+  - {fileID: 4990397082109434858, guid: c7f6771bc783a36488747f9397ec40fc, type: 3}
+  - {fileID: 3233248789816844687, guid: 1585f93355ba0ed4498aad2f5ff6ec52, type: 3}
+  - {fileID: 6702316821620508509, guid: ce246c7d30c472d4e813d5bae7a9987b, type: 3}
+  - {fileID: 2726646092771054295, guid: ba63698f589289c458eef0b48f8dad76, type: 3}
+  - {fileID: 4533524640060201709, guid: c74db5673c4ec374587534a7c3dcbd8c, type: 3}
+  - {fileID: 4743651515367296025, guid: 5d7019e9fd8027245a2c5cb80ed62453, type: 3}
+  - {fileID: 6181966895362367440, guid: 265d5f7bcb6acdd43bc9af995ac01fd0, type: 3}
+  - {fileID: 528275551998820323, guid: 0fd938270a5e56a4dbac5007499bc1d7, type: 3}
+  - {fileID: 5754080306284981720, guid: 9e53d888c0580414082055384ef9cce3, type: 3}
+  - {fileID: 58391757531886652, guid: e6d996dcceb043640b433d2715094002, type: 3}
+  - {fileID: 2940561320345676316, guid: d7253fb59d348964994218db57d5fdd8, type: 3}
+  - {fileID: 446120953894760031, guid: d06890079df2e3a44a71930c65bc86bd, type: 3}
+  - {fileID: 3650216990688808605, guid: 35774701fd3f7c44f9c9c0c6b1fa2b75, type: 3}
+  - {fileID: 4879857817398892679, guid: d9175c82a509eb2478c344bf9c1a463e, type: 3}
+  - {fileID: 2956041770998427031, guid: b37dce09a510fb645a6ce611e8f09183, type: 3}
+  - {fileID: 4508821517005978133, guid: adcaf5a9a44b7014da10b2bd18a5b32f, type: 3}
+  - {fileID: 6030680306758910557, guid: 60574059cfc716740862f8740ea40cc5, type: 3}
+  - {fileID: 4473906170950833025, guid: 698cefb75349e6344ab0f1de42ce79f4, type: 3}
+  - {fileID: 1094945074740783664, guid: c1cc1ed31c8fe1d468b4b982df6c6124, type: 3}
+  - {fileID: 6383937107527517277, guid: 3a802ab5fc041884593a7c791b756666, type: 3}
+  - {fileID: 3320301501051995134, guid: df5ec8537cbcdc8448563a483caf5812, type: 3}
+  - {fileID: 2194840782233563838, guid: 158ebb8326f4def47ab62364cb08899b, type: 3}
+  - {fileID: 7711144718153661904, guid: 1acb47a901d5c3e449d9baa73e676836, type: 3}
+  - {fileID: 4718538479556300263, guid: f81566bfebf4963409852f6d4eec01a1, type: 3}
+  - {fileID: 955546607652047891, guid: 46b56711429d3d6408e63749cbdeecae, type: 3}
+  - {fileID: 1729474669073264924, guid: 82e46185862f9734a85cc84572073b81, type: 3}
+  - {fileID: 1492879874339130542, guid: 47effcae9d544a2409b3855e1b742991, type: 3}
+  - {fileID: 3150998640419321051, guid: ee492d722b654c24cbce1d024cfa6fdd, type: 3}
+  fossilImages:
+  - {fileID: 21300000, guid: 140f86b1f9fb28441adb0a7fd72f22e2, type: 3}
+  - {fileID: 21300000, guid: a94fb8bef7985eb4299c78214bfb9937, type: 3}
+  - {fileID: 21300000, guid: 0e1e95c6f1ba47c4789cd9b7c067b21b, type: 3}
+  - {fileID: 21300000, guid: 86a82e54732431c4f8a2c109875829aa, type: 3}
+  - {fileID: 21300000, guid: d29837baf6253694cbabab90dcd03246, type: 3}
+  - {fileID: 21300000, guid: e699070859a7c934cb37f5a492033104, type: 3}
+  - {fileID: 21300000, guid: 140f86b1f9fb28441adb0a7fd72f22e2, type: 3}
+  - {fileID: 21300000, guid: dffc10253df40be47b3c04c97988b94f, type: 3}
+  - {fileID: 6238536508793740559, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -9201733649700018261, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -1568638221372242848, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 8398862855918999338, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 389527547581473057, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7995746212600263114, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 5377930256395652000, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -6327906204971294205, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 2103465297598726036, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -3863293722784348063, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 6520690533007125509, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -2048984213834616944, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 6054366861262026957, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 2402599201175358526, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7403895376955524585, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -6158814222814340780, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 7296930178504924918, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -5568589276524277431, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -7118478639918249906, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: -2818289773082199708, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 8087791072826656636, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}
+  - {fileID: 4809137521293944628, guid: 7a6bdff40771fd6419e6537fdf84e365, type: 3}

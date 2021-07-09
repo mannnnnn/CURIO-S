@@ -23,22 +23,35 @@ public class MineableObject : MonoBehaviour
     public bool removeable = false;
     public bool broken = false;
     private float fragility = 0.01f; // how quickly an object breaks
-
+    public SpriteRenderer animatedFossil;
+    public GameObject dirtMound;
     //interaction logic
     private bool interacting = false;
     private Excavator.ControlMode cursorTool = Excavator.ControlMode.HAND;
     private Excavator chimera;
+    private Animator animator;
     void Start()
     {
         chimera = Excavator.GetInstance();
+        animator = GetComponent<Animator>();
+        animatedFossil.sprite = transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+        dirtMound.transform.localScale = dirtMound.transform.localScale / transform.localScale.x;
     }
 
     public void Remove()
     {
-        TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
-        PlayerInfo.GetInstance().CollectFossil(fossil);
-        //TODO: play remove animation
-        //TODO: play some sfx
+        if(quality > failureThreshold)
+        {
+            TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
+            PlayerInfo.GetInstance().CollectFossil(fossil);
+        }
+       
+        chimera.currProgressLabel.text = "0%";
+        chimera.currQualityLabel.text = "0%";
+
+        chimera.progressFill.fillAmount = 0;
+        chimera.damageFill.fillAmount = 0;
+
         Destroy(this.gameObject);
     }
 
@@ -49,7 +62,7 @@ public class MineableObject : MonoBehaviour
         {
             if(removeable && !broken)
             {
-                Remove();
+                GetComponent<Animator>().SetTrigger("Collect");
             } else
             {
                 //TODO: error sound fx
@@ -84,20 +97,33 @@ public class MineableObject : MonoBehaviour
 
     public void UpdateDebugLabels()
     {
+
         float progressFillPercent = progress / completionThreshold ;
         float failureFillPercent = ((1 - quality));
 
-        chimera.currNameLabel.transform.parent.gameObject.SetActive(true);
+        if(completionThreshold > 0 && !float.IsNaN(progressFillPercent) && progressFillPercent >= 0)
+        {
+            chimera.currProgressLabel.text = broken ? "0%" : (Mathf.Clamp(progressFillPercent, 0, 1) * 100).ToString("#.##") + "%";
+        } else
+        {
+            chimera.currProgressLabel.text = "0%";
+            chimera.progressFill.fillAmount = 0;
+        }
 
-        chimera.currNameLabel.text = gameObject.name;
-        chimera.currProgressLabel.text = broken ? "" : (progressFillPercent * 100).ToString("#.##") + "%";
-        chimera.currQualityLabel.text = (failureFillPercent * 100).ToString("#.##") + "%";
+        if (!float.IsNaN(failureFillPercent) && failureFillPercent > 0)
+        {
+            chimera.currQualityLabel.text = (Mathf.Clamp(failureFillPercent, 0, 1) * 100).ToString("#.##") + "%";
+        }
+        else
+        {
+            chimera.currQualityLabel.text = "0%";
+            chimera.damageFill.fillAmount = 0;
+        }
+      
         chimera.progressFill.fillAmount = progressFillPercent;
         chimera.damageFill.fillAmount = failureFillPercent;
-        chimera.currNameLabel.color = broken ? brokenText : Color.white;
         chimera.currProgressLabel.color = broken ? brokenText : Color.white;
         chimera.currQualityLabel.color = broken ? brokenText : Color.white;
-
 
         if (broken)
         {
@@ -125,6 +151,7 @@ public class MineableObject : MonoBehaviour
                 {
                     broken = true;
                     quality = failureThreshold;
+                    animator.SetTrigger("Break");
                 }
                 if (!removeable)
                 {

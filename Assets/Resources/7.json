@@ -1,0 +1,92 @@
+{
+    "fossils": [
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 16,
+            "xy": [
+                3.9700000286102297,
+                2.130000114440918
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 12,
+            "xy": [
+                1.4589651823043824,
+                -0.4945392608642578
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 29,
+            "xy": [
+                4.412975788116455,
+                -1.901211142539978
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 10,
+            "xy": [
+                -4.636612415313721,
+                0.8183543682098389
+            ],
+            "scale": [
+                -4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ]
+}

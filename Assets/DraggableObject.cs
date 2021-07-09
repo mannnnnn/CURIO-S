@@ -9,7 +9,9 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     private bool interacting = false;
     Vector2 clickPos;
     Vector3 myOrigPos;
-    public Excavator.ControlMode prevControl; 
+    public Excavator.ControlMode prevControl;
+    private float scale = 1;
+
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
@@ -50,10 +52,13 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     void FixedUpdate()
     {
+        scale = 0.5f;
         if (interacting)
         {
             float deltaX = clickPos.x - Input.mousePosition.x;
             float deltaY = clickPos.y - Input.mousePosition.y;
+            deltaX *= scale;
+            deltaY *= scale;
             gameObject.transform.localPosition = new Vector3(myOrigPos.x - deltaX, myOrigPos.y - deltaY, myOrigPos.z);
         }
     }

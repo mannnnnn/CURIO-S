@@ -5,17 +5,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Excavator : MonoBehaviour
 {
-
+    float refWidth = 2160;
+    float refHeight = 1080;
     private List<MineableObject> treasures = new List<MineableObject>();
     private List<MineableObject> junk = new List<MineableObject>();
     public ControlMode controlMode = ControlMode.HAND;
     public GameObject scanner;
-
-
-    public Text currNameLabel;
     public Text currProgressLabel;
     public Text currQualityLabel;
     public Image progressFill;
@@ -53,13 +52,20 @@ public class Excavator : MonoBehaviour
     {
        return GameObject.Find("ChimeraController").GetComponent<Excavator>();
     }
+    public void BackButtonPressed()
+    {
+        SceneManager.LoadScene("Arcade");
+    }
 
     void Start()
     {
-
+        currProgressLabel.text = "0%";
+        currQualityLabel.text = "0%";
+        progressFill.fillAmount = 0;
+        damageFill.fillAmount = 0;
         if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
         {
-          // LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
+           LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
         }
 
         drillAnim = DrillCursor.GetComponentInChildren<Animator>();
@@ -84,10 +90,11 @@ public class Excavator : MonoBehaviour
 
     public void Update()
     {
-        if (controlMode == ControlMode.DRILL && ((Input.GetMouseButton(0) && !drillAnim.GetBool("Drilling")) || (!Input.GetMouseButton(0) && drillAnim.GetBool("Drilling"))))
+        /*
+        if (drillAnim != null && controlMode == ControlMode.DRILL && ((Input.GetMouseButton(0) && !drillAnim.GetBool("Drilling")) || (!Input.GetMouseButton(0) && drillAnim.GetBool("Drilling"))))
         {
             RunDrill();
-        } 
+        } */
     }
 
     public void PickTool(ControlMode mode)
@@ -152,28 +159,30 @@ public class Excavator : MonoBehaviour
 
     public bool LoadLevel(int level)
     {
+        Vector3 screenDim = Camera.main.ViewportToScreenPoint(Vector3.one);
+        float scale = Mathf.Min(refWidth / screenDim.x, refHeight / screenDim.y);
+
+
+
         foreach (MineableObject fossil in FindObjectsOfType<MineableObject>())
         {
             DestroyImmediate(fossil.gameObject);
         }
 
 
-        if (File.Exists(Application.persistentDataPath + "/" + level + ".nonsense"))
+        TextAsset file = Resources.Load(level.ToString()) as TextAsset;
+        string testRead = file.ToString();
+        LevelSetupSaveFile save = JsonUtility.FromJson<LevelSetupSaveFile>(testRead);
+
+        foreach (TreasureBook.Fossil fossil in save.fossils)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/" + level + ".nonsense", FileMode.Open);
-            LevelLoader.LevelSetupSaveFile save = (LevelLoader.LevelSetupSaveFile)formatter.Deserialize(file);
-            file.Close();
-
-            foreach (TreasureBook.Fossil fossil in save.fossils)
-            {
-                GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
-                loadedFossil.transform.position = new Vector3(fossil.xy[0], fossil.xy[1], -1);
-            }
-
-            return true;
+            GameObject loadedFossil = Instantiate(PlayerInfo.GetInstance().fossilBook.fossilPrefabs[fossil.prefabIndex]);
+            loadedFossil.transform.localPosition = new Vector3(fossil.xy[0] * scale, fossil.xy[1] * scale, -1);
+            loadedFossil.transform.localScale = new Vector3(fossil.scale[0] * scale, fossil.scale[1] * scale, 1);
+            loadedFossil.transform.eulerAngles = new Vector3(fossil.rotation[0], fossil.rotation[1], fossil.rotation[2]);
         }
-        return false;
+
+        return true;
     }
 
 }

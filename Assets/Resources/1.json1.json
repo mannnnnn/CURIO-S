@@ -1,0 +1,28 @@
+{
+    "fossils": [
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 3,
+            "xy": [
+                -5.519999980926514,
+                1.8700000047683716
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 10,
+            "xy": [
+                2.430000066757202,
+                0.12999999523162843
+            ]
+        }
+    ]
+}

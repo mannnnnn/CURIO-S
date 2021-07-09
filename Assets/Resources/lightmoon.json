@@ -1,0 +1,30 @@
+{
+    "fossils": [
+        {
+            "type": 7,
+            "topQuality": 0.9000000953674316,
+            "quantity": 7
+        },
+        {
+            "type": 11,
+            "topQuality": 1.0,
+            "quantity": 5
+        },
+        {
+            "type": 21,
+            "topQuality": 1.0,
+            "quantity": 1
+        },
+        {
+            "type": 5,
+            "topQuality": 0.0,
+            "quantity": 1
+        },
+        {
+            "type": 28,
+            "topQuality": 0.16000066697597505,
+            "quantity": 1
+        }
+    ],
+    "stage": 0
+}

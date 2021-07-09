@@ -8,13 +8,18 @@ public class TreasureBook : ScriptableObject
 
     public List<Fossil> fossils = new List<Fossil>();
     public List<GameObject> fossilPrefabs = new List<GameObject>();
-
+    public List<Sprite> fossilImages = new List<Sprite>();
     public Fossil GetFossilInfo(FossilType type){
            foreach(Fossil fossil in fossils)
         {
             if (fossil.type == type) return fossil;
         }
         return null;
+    }
+
+    public Sprite GetFossilSprite(FossilType type)
+    {
+        return fossilImages[(int)type];
     }
 
     [System.Serializable]
@@ -42,6 +47,8 @@ public class TreasureBook : ScriptableObject
         public MineableObject.Classification classification = MineableObject.Classification.TREASURE;
         public int prefabIndex = -1;
         public float[] xy;
+        public float[] scale;
+        public float[] rotation;
     }
 
     [System.Serializable]

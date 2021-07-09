@@ -12,11 +12,21 @@ public class PlayerInfo : MonoBehaviour
     string playerName = "lightmoon";
     public TreasureBook fossilBook; //used for looking up fossil information
 
-    
+    void Awake()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public static PlayerInfo GetInstance()
     {
-        return GameObject.Find("ImmortalChimera").GetComponent<PlayerInfo>();
+        return GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerInfo>();
     }
 
     void Start()
@@ -47,7 +57,6 @@ public class PlayerInfo : MonoBehaviour
                 recordedFind.quantity++;
                 if(fossil.topQuality > recordedFind.topQuality)
                 {
-                    //TODO: new record
                     recordedFind.topQuality = fossil.topQuality;
                 }
                 prevRecorded = true;
@@ -59,7 +68,7 @@ public class PlayerInfo : MonoBehaviour
             //TODO: new fossil!
             collectedFossils.Add(fossil);
         }
-
+        SaveGame();
     }
 
     //////////////////// SAVE LOAD SYSTEM
@@ -76,23 +85,18 @@ public class PlayerInfo : MonoBehaviour
         SaveFile save = new SaveFile();
         save.stage = currentStage;
         save.fossils = collectedFossils;
-
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/" + playerName + ".nonsense");
-        formatter.Serialize(file, save);
-        file.Close();
+        string fileLocation = Application.dataPath + "/Resources/";
+        string jsonData = JsonUtility.ToJson(save, true);
+        File.WriteAllText(fileLocation + playerName + ".json", jsonData);
     }
 
-    private bool LoadGame()
+    public bool LoadGame()
     {
-        if (File.Exists(Application.persistentDataPath + "/" + playerName + ".nonsense"))
+        if (File.Exists(Application.dataPath + "/Resources/" + playerName + ".json"))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/" + playerName + ".nonsense", FileMode.Open);
-            SaveFile save = (SaveFile)formatter.Deserialize(file);
-            file.Close();
-
-
+            TextAsset file = Resources.Load(playerName) as TextAsset;
+            string testRead = file.ToString();
+            SaveFile save = JsonUtility.FromJson<SaveFile>(testRead);
             currentStage = save.stage;
             collectedFossils = save.fossils;
             return true;

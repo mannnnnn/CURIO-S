@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 9916d7cd1f155fc4d9221dfe8b88f3e5
   - enabled: 1
-    path: Assets/Scenes/Excavator.unity
-    guid: 5bf3b85f524a0054bbabfec87847e5ef
-  - enabled: 1
     path: Assets/Scenes/Arcade.unity
     guid: 1ab7c41b54d25a445aa461e950faf2ff
+  - enabled: 1
+    path: Assets/Scenes/ExcavatorSave.unity
+    guid: 4cd46f6db38cef6419f9b1c8828144e5
+  - enabled: 1
+    path: Assets/Scenes/Inventory.unity
+    guid: 72cdcc920f187334eb7bbc21eefd9eb4
   m_configObjects: {}

@@ -1403,12 +1403,12 @@ PrefabInstance:
     - target: {fileID: 9013283574084724141, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_MaskInteraction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724142, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Name
-      value: Fossil_Datriraptor
+      value: Fossil_Datriraptor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724143, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}

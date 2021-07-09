@@ -1,0 +1,48 @@
+{
+    "fossils": [
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 23,
+            "xy": [
+                2.259999990463257,
+                1.2699999809265137
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 6,
+            "xy": [
+                -3.859999895095825,
+                0.30000001192092898
+            ],
+            "scale": [
+                0.699999988079071,
+                0.699999988079071,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ]
+}

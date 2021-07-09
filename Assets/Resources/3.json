@@ -1,0 +1,70 @@
+{
+    "fossils": [
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 24,
+            "xy": [
+                1.2681374549865723,
+                -0.17280319333076478
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 13,
+            "xy": [
+                -3.5278542041778566,
+                -1.0213247537612916
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "type": 1,
+            "name": "",
+            "desc": "Doo do daat dat-",
+            "flavor": "oh god",
+            "classification": 1,
+            "prefabIndex": 1,
+            "xy": [
+                -5.845644950866699,
+                1.8505198955535889
+            ],
+            "scale": [
+                0.6000000238418579,
+                0.6000000238418579,
+                0.08023321628570557
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                13.612689971923829
+            ]
+        }
+    ]
+}
