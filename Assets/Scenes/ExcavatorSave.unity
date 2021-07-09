@@ -12386,7 +12386,7 @@ MonoBehaviour:
   enabledModes: 0000000001000000
   Pen_Colour: {r: 0, g: 0, b: 0, a: 0}
   Pen_Width: 20
-  Reset_Colour: {r: 0.21698111, g: 0.10234958, b: 0.10630241, a: 1}
+  Reset_Colour: {r: 0.11320752, g: 0.062477734, b: 0.064227045, a: 1}
   Drawing_Layers:
     serializedVersion: 2
     m_Bits: 256
