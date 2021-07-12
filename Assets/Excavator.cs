@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Excavator : MonoBehaviour
 {
@@ -34,8 +35,16 @@ public class Excavator : MonoBehaviour
     public AudioSource audioSource;
     public string currSoundClip = "";
 
+    public GameObject resultTreasure;
+    public GameObject resultScreen;
+    public GameObject resultBox;
+
+    private bool gameEnded = false;
+    public List<TreasureBook.MinedFossil> SessionCollectedFossils = new List<TreasureBook.MinedFossil>();
+
     [System.Serializable]
-    public class SFXSet{
+    public class SFXSet
+    {
         public string sfxName = "";
         public AudioClip audio;
         public bool loopUntilCancelled = false; //sfx will play until the event comes in to stop it
@@ -50,11 +59,17 @@ public class Excavator : MonoBehaviour
 
     public static Excavator GetInstance()
     {
-       return GameObject.Find("ChimeraController").GetComponent<Excavator>();
+        return GameObject.Find("ChimeraController").GetComponent<Excavator>();
     }
     public void BackButtonPressed()
     {
         SceneManager.LoadScene("Arcade");
+    }
+
+    public MineableObject[] GetAllTreasures()
+    {
+        //TODO: Let's optimize 
+        return FindObjectsOfType<MineableObject>();
     }
 
     void Start()
@@ -65,7 +80,7 @@ public class Excavator : MonoBehaviour
         damageFill.fillAmount = 0;
         if (PlayerPrefs.GetInt("ArcadeLevel") > 0)
         {
-           LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
+            LoadLevel(PlayerPrefs.GetInt("ArcadeLevel"));
         }
 
         drillAnim = DrillCursor.GetComponentInChildren<Animator>();
@@ -74,12 +89,13 @@ public class Excavator : MonoBehaviour
         //Load in references to all the mineable objects, and sort them out
         foreach (MineableObject obj in FindObjectsOfType<MineableObject>())
         {
-            switch (obj.classification) {
-                case MineableObject.Classification.TREASURE:  treasures.Add(obj); break;
+            switch (obj.classification)
+            {
+                case MineableObject.Classification.TREASURE: treasures.Add(obj); break;
                 case MineableObject.Classification.TRASH:
                 default: junk.Add(obj); break;
             }
-            
+
         }
     }
 
@@ -90,6 +106,15 @@ public class Excavator : MonoBehaviour
 
     public void Update()
     {
+
+        if (GetAllTreasures().Length == 0 && !gameEnded)
+        {
+            //end the game
+            gameEnded = true;
+            EndGameResults();
+        }
+
+
         /*
         if (drillAnim != null && controlMode == ControlMode.DRILL && ((Input.GetMouseButton(0) && !drillAnim.GetBool("Drilling")) || (!Input.GetMouseButton(0) && drillAnim.GetBool("Drilling"))))
         {
@@ -131,23 +156,24 @@ public class Excavator : MonoBehaviour
     public void RunDrill()
     {
         Animator drillAnim = DrillCursor.GetComponentInChildren<Animator>();
-        drillAnim.SetBool("Drilling", !drillAnim.GetBool("Drilling")); 
+        drillAnim.SetBool("Drilling", !drillAnim.GetBool("Drilling"));
     }
 
-    public void PlaySFX(string sfxEvent){
-       foreach(SFXSet set in sfx)
+    public void PlaySFX(string sfxEvent)
+    {
+        foreach (SFXSet set in sfx)
         {
-            if(set.sfxName == sfxEvent)
+            if (set.sfxName == sfxEvent)
             {
                 audioSource.clip = set.audio;
                 audioSource.loop = set.loopUntilCancelled;
             }
         }
-       if(audioSource.clip != null)
+        if (audioSource.clip != null)
         {
             currSoundClip = audioSource.loop ? sfxEvent : "";
             audioSource.Play();
-            
+
         }
     }
 
@@ -185,4 +211,25 @@ public class Excavator : MonoBehaviour
         return true;
     }
 
+
+
+    public void EndGameResults()
+    {
+        resultScreen.SetActive(true);
+        foreach(TreasureBook.MinedFossil fossil in SessionCollectedFossils)
+        {
+            GameObject treasure = Instantiate(resultTreasure, resultBox.transform);
+            Image treasureImageShadow = treasure.gameObject.transform.GetChild(1).GetComponent<Image>();
+            Image treasureImage = treasure.gameObject.transform.GetChild(2).GetComponent<Image>();
+            Text treasureName = treasure.gameObject.transform.GetChild(3).GetComponent<Text>();
+            Text treasurePercent = treasure.gameObject.transform.GetChild(5).GetComponent<Text>();
+            
+
+            treasureImageShadow.sprite = PlayerInfo.GetInstance().fossilBook.GetFossilSprite(fossil.type);
+            treasureImage.sprite = PlayerInfo.GetInstance().fossilBook.GetFossilSprite(fossil.type);
+            treasureImage.color = new Color(treasureImage.color.r, treasureImage.color.g*(fossil.topQuality), treasureImage.color.b, treasureImage.color.a);
+            treasureName.text = PlayerInfo.GetInstance().fossilBook.GetFossilInfo(fossil.type).name;
+            treasurePercent.text = String.Format("{0:P2}", fossil.topQuality);
+        }
+    }
 }

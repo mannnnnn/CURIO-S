@@ -13,17 +13,27 @@
         {
             "type": 21,
             "topQuality": 1.0,
-            "quantity": 1
+            "quantity": 2
         },
         {
             "type": 5,
-            "topQuality": 0.0,
-            "quantity": 1
+            "topQuality": 0.820000171661377,
+            "quantity": 2
         },
         {
             "type": 28,
             "topQuality": 0.16000066697597505,
             "quantity": 1
+        },
+        {
+            "type": 4,
+            "topQuality": 0.9900000095367432,
+            "quantity": 3
+        },
+        {
+            "type": 27,
+            "topQuality": 0.8400001525878906,
+            "quantity": 2
         }
     ],
     "stage": 0

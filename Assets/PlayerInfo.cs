@@ -68,6 +68,13 @@ public class PlayerInfo : MonoBehaviour
             //TODO: new fossil!
             collectedFossils.Add(fossil);
         }
+        Excavator.GetInstance().SessionCollectedFossils.Add(fossil);
+        SaveGame();
+    }
+
+    public void DestroyFossil(TreasureBook.MinedFossil fossil)
+    {
+        Excavator.GetInstance().SessionCollectedFossils.Add(fossil);
         SaveGame();
     }
 

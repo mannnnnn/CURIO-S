@@ -40,10 +40,13 @@ public class MineableObject : MonoBehaviour
 
     public void Remove()
     {
-        if(quality > failureThreshold)
+        TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
+        if (quality > failureThreshold)
         {
-            TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
             PlayerInfo.GetInstance().CollectFossil(fossil);
+        } else
+        {
+            PlayerInfo.GetInstance().DestroyFossil(fossil);
         }
        
         chimera.currProgressLabel.text = "0%";
