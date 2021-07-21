@@ -697,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 9013283574084724140, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: completionThreshold
-      value: 0.5
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724141, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}

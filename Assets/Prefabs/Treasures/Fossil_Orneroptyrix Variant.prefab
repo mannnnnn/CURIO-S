@@ -1609,6 +1609,11 @@ PrefabInstance:
       propertyPath: type
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9013283574084724140, guid: 20761893e6928184e9551c1031d09b64,
+        type: 3}
+      propertyPath: completionThreshold
+      value: 0.2853057
+      objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724141, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Sprite
@@ -1618,7 +1623,7 @@ PrefabInstance:
     - target: {fileID: 9013283574084724142, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Name
-      value: Fossil_Orneroptyrix
+      value: Fossil_Orneroptyrix Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724143, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}

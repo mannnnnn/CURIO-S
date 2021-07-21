@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InventoryScreen : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class InventoryScreen : MonoBehaviour
     public GameObject flavorPanel;
     public Button flavorBtn;
 
+    
     private bool saveFileExists = false;
     private string unknownName = "???";
     public TreasureBook.FossilType selectedFossil;
@@ -76,6 +78,11 @@ public class InventoryScreen : MonoBehaviour
            
         }
         LeftButtonClicked(1);
+    }
+
+    public void BackButtonPressed()
+    {
+        SceneManager.LoadScene("Arcade");
     }
 
     void LeftButtonClicked(int fossilNum)

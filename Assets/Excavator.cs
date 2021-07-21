@@ -38,6 +38,7 @@ public class Excavator : MonoBehaviour
     public GameObject resultTreasure;
     public GameObject resultScreen;
     public GameObject resultBox;
+    public Text resultText;
 
     private bool gameEnded = false;
     public List<TreasureBook.MinedFossil> SessionCollectedFossils = new List<TreasureBook.MinedFossil>();
@@ -216,6 +217,36 @@ public class Excavator : MonoBehaviour
     public void EndGameResults()
     {
         resultScreen.SetActive(true);
+
+        float result = 1;
+        float resultDif = 0;
+        foreach (TreasureBook.MinedFossil fossil in SessionCollectedFossils)
+        {
+            resultDif += 1-fossil.topQuality;
+        }
+
+        result -= resultDif / SessionCollectedFossils.Count;
+        if (result >= 1)
+        {
+            resultText.text = "A+";
+        } else if (result >= 0.9f)
+        {
+            resultText.text = "A";
+        } else if (result >= 0.7f)
+        {
+            resultText.text = "B";
+        } else if (result >= 0.5f)
+        {
+            resultText.text = "C";
+        } else if (result >= 0.4f)
+        {
+            resultText.text = "D";
+        } else
+        {
+            resultText.text = "F";
+        }
+
+
         foreach(TreasureBook.MinedFossil fossil in SessionCollectedFossils)
         {
             GameObject treasure = Instantiate(resultTreasure, resultBox.transform);
@@ -227,9 +258,10 @@ public class Excavator : MonoBehaviour
 
             treasureImageShadow.sprite = PlayerInfo.GetInstance().fossilBook.GetFossilSprite(fossil.type);
             treasureImage.sprite = PlayerInfo.GetInstance().fossilBook.GetFossilSprite(fossil.type);
-            treasureImage.color = new Color(treasureImage.color.r, treasureImage.color.g*(fossil.topQuality), treasureImage.color.b, treasureImage.color.a);
+           // treasureImage.color = new Color(treasureImage.color.r, treasureImage.color.g*(fossil.topQuality), treasureImage.color.b, treasureImage.color.a);
             treasureName.text = PlayerInfo.GetInstance().fossilBook.GetFossilInfo(fossil.type).name;
-            treasurePercent.text = String.Format("{0:P2}", fossil.topQuality);
+            treasurePercent.text = (String.Format("{0:P2}", fossil.topQuality));
+            treasurePercent.text = treasurePercent.text.Remove(treasurePercent.text.Length - 3);
         }
     }
 }

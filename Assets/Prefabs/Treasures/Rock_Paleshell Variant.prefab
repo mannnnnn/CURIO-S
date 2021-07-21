@@ -864,6 +864,11 @@ PrefabInstance:
       propertyPath: type
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 9013283574084724140, guid: 20761893e6928184e9551c1031d09b64,
+        type: 3}
+      propertyPath: completionThreshold
+      value: 0.5117158
+      objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724141, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Sprite
@@ -873,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 9013283574084724142, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Name
-      value: Rock_Paleshell
+      value: Rock_Paleshell Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724143, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}

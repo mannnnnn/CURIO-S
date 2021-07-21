@@ -604,6 +604,11 @@ PrefabInstance:
       propertyPath: type
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 9013283574084724140, guid: 20761893e6928184e9551c1031d09b64,
+        type: 3}
+      propertyPath: completionThreshold
+      value: 0.6139445
+      objectReference: {fileID: 0}
     - target: {fileID: 9013283574084724141, guid: 20761893e6928184e9551c1031d09b64,
         type: 3}
       propertyPath: m_Sprite
