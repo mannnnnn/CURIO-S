@@ -30,6 +30,9 @@ public class MineableObject : MonoBehaviour
     private Excavator.ControlMode cursorTool = Excavator.ControlMode.HAND;
     private Excavator chimera;
     private Animator animator;
+
+    private float fallbackCooldownForRemoval = 2000f;
+
     void Start()
     {
         chimera = Excavator.GetInstance();
@@ -38,24 +41,51 @@ public class MineableObject : MonoBehaviour
         dirtMound.transform.localScale = dirtMound.transform.localScale / transform.localScale.x;
     }
 
-    public void Remove()
+    public void RemoveFossil()
     {
+
         TreasureBook.MinedFossil fossil = new TreasureBook.MinedFossil(type, quality, 1);
         if (quality > failureThreshold)
         {
-            PlayerInfo.GetInstance().CollectFossil(fossil);
+            if (PlayerInfo.GetInstance() != null)
+            {
+                chimera.currProgressLabel.text = "COLLECT1";
+                PlayerInfo.GetInstance().CollectFossil(fossil);
+                chimera.currProgressLabel.text = "COLLECT2";
+            } else
+            {
+                chimera.currProgressLabel.text = "ERROR1";
+            }
+          
+           
         } else
         {
-            PlayerInfo.GetInstance().DestroyFossil(fossil);
+            if (PlayerInfo.GetInstance() != null)
+            {
+                PlayerInfo.GetInstance().DestroyFossil(fossil);
+            } else
+            {
+                chimera.currProgressLabel.text = "ERROR2";
+            }
+               
+           
         }
        
-        chimera.currProgressLabel.text = "0%";
-        chimera.currQualityLabel.text = "0%";
+        if(chimera != null)
+        {
+            chimera.currProgressLabel.text = "0%";
+            chimera.currQualityLabel.text = "0%";
 
-        chimera.progressFill.fillAmount = 0;
-        chimera.damageFill.fillAmount = 0;
+            chimera.progressFill.fillAmount = 0;
+            chimera.damageFill.fillAmount = 0;
+            foreach (SpriteRenderer sprite in GetComponentsInChildren<SpriteRenderer>())
+            {
+                sprite.color = Color.red;
+            }
+        }
 
         Destroy(this.gameObject);
+        
     }
 
     public void OnMouseDown()

@@ -92,14 +92,15 @@ public class PlayerInfo : MonoBehaviour
         SaveFile save = new SaveFile();
         save.stage = currentStage;
         save.fossils = collectedFossils;
-        string fileLocation = Application.dataPath + "/Resources/";
+        string fileLocation = Path.Combine(Application.persistentDataPath, playerName + ".json");
         string jsonData = JsonUtility.ToJson(save, true);
-        File.WriteAllText(fileLocation + playerName + ".json", jsonData);
+        File.WriteAllText(fileLocation, jsonData);
     }
 
     public bool LoadGame()
     {
-        if (File.Exists(Application.dataPath + "/Resources/" + playerName + ".json"))
+        string fileLocation = Path.Combine(Application.persistentDataPath, playerName + ".json");
+        if (File.Exists(fileLocation))
         {
             TextAsset file = Resources.Load(playerName) as TextAsset;
             string testRead = file.ToString();

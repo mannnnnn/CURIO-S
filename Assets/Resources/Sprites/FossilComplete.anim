@@ -877,7 +877,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.7333333
-    functionName: Remove
+    functionName: RemoveFossil
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
